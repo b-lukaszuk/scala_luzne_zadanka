@@ -9,10 +9,10 @@ No big deal, but who knows maybe I will be hooked in.
 Introductory video to scala from [DevInsideYou](https://www.youtube.com/watch?v=-xRfJcwhy7A)
 
 Initial setup based on the video above, briefly:
-- install [courier](https://github.com/coursier/coursier), instructions [here](https://get-coursier.io/docs/cli-installation)
+- install [coursier](https://github.com/coursier/coursier), instructions [here](https://get-coursier.io/docs/cli-installation)
 - run from bash `./sc setup`
 
-Courier is like package manager for Scala (something like `pip` in python?)
+Coursier is like package manager for Scala (something like `pip` in python?)
 
 Use:
 - scala: type in bash `scala`, basic Scala REPL
@@ -22,6 +22,7 @@ Use:
 
 Additional install:
 - Metals: LSP (language server protocol) for Scala, more info probably [here](https://scalameta.org/metals/)
+Installing metals via coursier `coursier install metals`
 
 # Additional info
 
