@@ -20,6 +20,9 @@ Use:
 - scalac: (type in bash `scalac [file_name.scala]`) scala compiler
 - sbt - scala build tool - will use it for quite some stuff (better scalac?)
 
+Additional install:
+- Metals: LSP (language server protocol) for Scala, more info probably [here](https://scalameta.org/metals/)
+
 # Additional info
 
 **Do użytku własnego, nie powinno być używane przez nikogo innego.**
