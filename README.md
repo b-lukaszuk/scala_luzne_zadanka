@@ -22,6 +22,7 @@ Use:
 
 Additional install:
 - Metals: LSP (language server protocol) for Scala, more info probably [here](https://scalameta.org/metals/)
+
 Installing metals via coursier `coursier install metals`
 
 # Additional info
