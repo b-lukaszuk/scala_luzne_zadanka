@@ -6,19 +6,19 @@ No big deal, but who knows maybe I will be hooked in.
 
 # Initial info
 
-Introductory video to scala: [DevInsideYou](https://www.youtube.com/watch?v=-xRfJcwhy7A)
+Introductory video to scala from [DevInsideYou](https://www.youtube.com/watch?v=-xRfJcwhy7A)
 
-Initial setup based on the video above:
-- install [courier](https://github.com/coursier/coursier), instruction [here](https://get-coursier.io/docs/cli-installation)
+Initial setup based on the video above, briefly:
+- install [courier](https://github.com/coursier/coursier), instructions [here](https://get-coursier.io/docs/cli-installation)
 - run from bash `./sc setup`
 
 Courier is like package manager for Scala (something like `pip` in python?)
 
 Use:
-- scala: (type in bash `scala`) basic Scala REPL
-- ammonite: (type in bash `amm`) - better Scala REPL
-- scalac: (type in bash `scalac [file_name.scala]`) scala compiler
-- sbt - scala build tool - will use it for quite some stuff (better scalac?)
+- scala: type in bash `scala`, basic Scala REPL
+- ammonite: type in bash `amm`, better Scala REPL
+- scalac: type in bash `scalac [file_name.scala]`, scala compiler
+- sbt: will use it for quite some stuff (better scalac?), more info probably [here](https://www.scala-sbt.org/)
 
 Additional install:
 - Metals: LSP (language server protocol) for Scala, more info probably [here](https://scalameta.org/metals/)
@@ -26,4 +26,5 @@ Additional install:
 # Additional info
 
 **Do użytku własnego, nie powinno być używane przez nikogo innego.**
+
 **For personal use only, should not be used by anyone else.**
