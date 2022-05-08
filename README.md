@@ -33,7 +33,7 @@ A minimum sbt build:
 
 ```bash
 mkdir foo-build
-cd food-build
+cd foo-build
 touch build.sbt
 ```
 
