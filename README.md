@@ -6,7 +6,7 @@ No big deal, but who knows maybe I will be hooked in.
 
 # Initial info
 
-Introductory video to scala from [DevInsideYou](https://www.youtube.com/watch?v=-xRfJcwhy7A)
+Introductory video to Scala from [DevInsideYou](https://www.youtube.com/watch?v=-xRfJcwhy7A)
 
 Initial setup based on the video above, briefly:
 - install [coursier](https://github.com/coursier/coursier), instructions [here](https://get-coursier.io/docs/cli-installation)
