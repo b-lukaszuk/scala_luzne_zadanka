@@ -1,0 +1,12 @@
+# ignore everything
+*
+
+# except specific file
+!.gitignore
+
+# except specific file extensions
+!*.md
+!*.scala
+!*.sbt
+# except subdirectories (neccessary for the file extensions above to work correctly)
+!*/
