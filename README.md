@@ -20,10 +20,34 @@ Use:
 - scalac: type in bash `scalac [file_name.scala]`, scala compiler
 - sbt: will use it for quite some stuff (better scalac?), more info probably [here](https://www.scala-sbt.org/)
 
+## Metals
+
 Additional install:
 - Metals: LSP (language server protocol) for Scala, more info probably [here](https://scalameta.org/metals/)
 
 Installing metals via coursier `coursier install metals`
+
+## Sbt
+
+A minimum sbt build:
+
+```bash
+mkdir foo-build
+cd food-build
+touch build.sbt
+```
+
+Start sbt shell: `sbt`
+
+Exit sbt shell: `sbt:foo-build> exit`
+
+Compile code: `sbt:foo-build> compile`
+
+Recompile code at change: `sbt:foo-build> ~compile`
+
+Run the app: `sbt:foo-build> run`
+
+Rerun the app at change: `sbt:foo-build> ~run`
 
 # Additional info
 
