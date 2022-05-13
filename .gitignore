@@ -8,5 +8,6 @@
 !*.md
 !*.scala
 !*.sbt
+!*.conf
 # except subdirectories (neccessary for the file extensions above to work correctly)
 !*/
