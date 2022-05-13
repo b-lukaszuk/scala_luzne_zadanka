@@ -4,16 +4,11 @@ object Task2_1 {
     val years: Array[Int] = Array(1974, 1900, 1985, 2000);
 
     // https://en.wikipedia.org/wiki/Leap_year#Algorithm
-    def isLeap(year: Int): Boolean = {
-      if (year % 4 != 0) {
-        false
-      } else if (year % 25 != 0) {
-        true
-      } else if (year % 16 != 0) {
-        false
-      } else {
-        true
-      }
+    def isLeap(year: Int): Boolean = year match {
+      case year if (year % 4 != 0)  => false
+      case year if (year % 25 != 0) => true
+      case year if (year % 16 != 0) => false
+      case _                        => true
     }
 
     println("-" * 50)
