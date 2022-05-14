@@ -18,7 +18,7 @@ object Task2_6 {
     println("-" * 50)
     println("Task 2.6")
     println("Given the numbers:")
-    nums.foreach { n => print(n.toString() + " ") }
+    println(nums.mkString(", "))
     println("The average of even numbers is:")
     println(getAvgOfEvens(nums).toString())
     println("That's it goodbye!")
