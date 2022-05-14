@@ -26,8 +26,8 @@ object Task2_2 {
     println("-" * 50)
     println("Task 2.2")
     println("Given the numbers:")
-    nums.foreach { n => print(n.toString() + " ") }
-    println("\nThe sum of the odd numbers is equal to:")
+    println(nums.mkString(", "))
+    println("The sum of the odd numbers is equal to:")
     println(getSumOfOddNums(nums).toString())
     println("That's it goodbye!")
     println("-" * 50)

@@ -27,9 +27,9 @@ object Task2_4 {
     println("-" * 50)
     println("Task 2.4")
     println("Given the words:")
-    words.foreach { w => print(w + " ") }
-    println("\nThe longest word(s) is/are:")
-    getLongestWords(words).foreach(println)
+    println(words.mkString(", "))
+    println("The longest word(s) is/are:")
+    println(getLongestWords(words).mkString(", "))
     println("That's it goodbye!")
     println("-" * 50)
   }

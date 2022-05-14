@@ -14,10 +14,10 @@ object Task2_1 {
     println("-" * 50)
     println("Task 2.1")
     println("Out of the years:")
-    years.foreach { y => print(y.toString() + " ") }
-    println("\nthe following are leap years:")
-    years.filter(y => isLeap(y)).foreach { y => print(y.toString() + " ") }
-    println("\nThat's it goodbye!")
+    println(years.mkString(", "))
+    println("the following are leap years:")
+    println(years.filter(y => isLeap(y)).mkString(", "))
+    println("That's it goodbye!")
     println("-" * 50)
   }
 }

@@ -30,9 +30,8 @@ object Task2_3 {
     println("-" * 50)
     println("Task 2.3")
     println("Given the numbers:")
-    nums.foreach { n => print(n.toString() + " ") }
-    println("\nThe min and max are:")
-    println(s"Min: ${min}, Max: ${max}")
+    println(nums.mkString(", "))
+    println(s"The min and max are: ${min} (min), ${max} (max)")
     println("That's it goodbye!")
     println("-" * 50)
   }
