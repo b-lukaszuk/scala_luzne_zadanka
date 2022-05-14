@@ -18,8 +18,8 @@ object Task2_5 {
     println("-" * 50)
     println("Task 2.5")
     println("Given the numbers:")
-    nums.foreach { n => print(n.toString() + " ") }
-    println("\nThe index of the index(es) of max value is/are:")
+    println(nums.mkString(", "))
+    println("The index of the index(es) of max value is/are:")
     println(getMaxIndexes(nums).mkString(", "))
     println("That's it goodbye!")
     println("-" * 50)
