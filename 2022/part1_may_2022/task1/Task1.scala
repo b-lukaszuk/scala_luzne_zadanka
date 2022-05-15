@@ -14,10 +14,8 @@ object Task1 {
       fact2(1, n)
     }
 
-    val nums: Array[Int] = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
-
     println("-" * 50)
-    nums.foreach { i => println(s"factorial(${i}) = ${fact1(i)}") }
+    Range(0, 12).foreach { i => println(s"factorial(${i}) = ${fact1(i)}") }
     println("-" * 50)
   }
 }
