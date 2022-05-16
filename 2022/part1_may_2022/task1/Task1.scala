@@ -1,5 +1,5 @@
 object Task1 {
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
     def fact1(n: Int): Int = {
       @scala.annotation.tailrec
       def fact2(acc: Int, n: Int): Int = {
