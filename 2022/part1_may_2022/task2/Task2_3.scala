@@ -1,5 +1,5 @@
 object Task2_3 {
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
 
     val nums: Array[Int] = Array(1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98)
 

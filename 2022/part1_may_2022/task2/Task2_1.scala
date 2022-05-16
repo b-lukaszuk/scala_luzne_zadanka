@@ -1,5 +1,5 @@
 object Task2_1 {
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
 
     val years: Array[Int] = Array(1974, 1900, 1985, 2000);
 

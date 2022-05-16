@@ -1,5 +1,5 @@
 object Task2_4 {
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
 
     val words: Array[String] =
       Array(
