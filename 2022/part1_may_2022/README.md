@@ -6,6 +6,7 @@
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
+5. [Task 5](#task-5)
 ---
 
 # Task 1
@@ -97,3 +98,19 @@ Create a function that takes given array. Then takes a random element, removes i
 ## Task 4.6
 
 Create a function that on given array will perform operation of adding or subtracting elements. Operation is to be chosen at random. And return a result.[a,b,c,d] =>(((a+-b)+-c)+-d)
+
+# Task 5
+
+[Go to: Table of contents](#table-of-contents)
+
+## Task 5.1
+
+Create a function that will return the current day name in Polish.
+
+## Task 5.2
+
+Create a function that tells us how many days till Friday :)
+
+## Task 5.3
+
+Create a function that take two numbers and return the object with 4 fields. Result on 4 basic arithmetic operations.
