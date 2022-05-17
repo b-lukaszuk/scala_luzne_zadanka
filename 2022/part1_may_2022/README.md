@@ -4,6 +4,7 @@
 
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 ---
 
 # Task 1
@@ -50,3 +51,20 @@ Calculate average value of items at even indexes. Zero is not considered to be e
 
 With a given start value of 0. Iterate the array and add even items and subtract odd ones. [1,6,23,8,4,98,3,7,3,98,4,98]
 
+# Task 3
+
+[Go to: Table of contents](#table-of-contents)
+
+ARRAY: (1,6,23,8,4,8,3,7)
+
+## Task 3.1
+
+Create a function that returns the sum of all elements passed in array as parameter. Function (array)=>number
+
+## Task 3.2
+
+Create a function that returns sum of first and last elements of given array.
+
+## Task 3.3
+
+Create a function that returns given array in reverse order. // no build-in functions :)
