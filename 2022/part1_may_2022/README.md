@@ -19,6 +19,8 @@ Write a simple factorial function in Scala (only for integers, no need for gamma
 
 [Go to: Table of contents](#table-of-contents)
 
+Copied/modified from: [my GitHub haskell](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part1_13_03_2021
+
 # Task 2.1
 
 From years in array check for leap years [1974, 1900, 1985, 2000]
@@ -57,6 +59,8 @@ With a given start value of 0. Iterate the array and add even items and subtract
 
 [Go to: Table of contents](#table-of-contents)
 
+Copied/modified from: [my GitHub haskell](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part1_13_03_2021
+
 ARRAY: (1,6,23,8,4,8,3,7)
 
 ## Task 3.1
@@ -74,6 +78,8 @@ Create a function that returns given array in reverse order. // no build-in func
 # Task 4
 
 [Go to: Table of contents](#table-of-contents)
+
+Copied/modified from: [my GitHub haskell](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part1_13_03_2021
 
 ## Task 4.1
 
@@ -102,6 +108,8 @@ Create a function that on given array will perform operation of adding or subtra
 # Task 5
 
 [Go to: Table of contents](#table-of-contents)
+
+Copied/modified from: [my GitHub haskell](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part1_13_03_2021
 
 ## Task 5.1
 
