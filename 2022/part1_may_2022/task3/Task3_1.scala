@@ -1,4 +1,4 @@
-object Task2_1 {
+object Task3_1 {
   def main(args: Array[String]): Unit = {
 
     val nums: Array[Int] = Array(1, 6, 23, 8, 4, 8, 3, 7)
