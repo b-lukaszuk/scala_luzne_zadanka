@@ -9,12 +9,9 @@ object Task2_2 {
 
     def sum(arr: Array[Int]): Int = {
       @scala.annotation.tailrec
-      def sum2(acc: Int, arr: Array[Int]): Int = {
-        if (arr.length == 0) {
-          acc
-        } else {
-          sum2(acc + arr.head, arr.tail)
-        }
+      def sum2(acc: Int, arr: Array[Int]): Int = arr match {
+        case arr if (arr.length == 0) => acc
+        case _                        => sum2(acc + arr.head, arr.tail)
       }
       sum2(0, arr)
     }

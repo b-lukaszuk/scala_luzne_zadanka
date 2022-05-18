@@ -10,18 +10,18 @@ object Task2_3 {
         )
       }
       @scala.annotation.tailrec
-      def getMinMax2(min: Int, max: Int, arr: Array[Int]): Array[Int] = {
-        if (arr.length == 0) {
-          Array(min, max)
-        } else {
-          val fstVal: Int = arr.head
-          getMinMax2(
-            if (fstVal < min) fstVal else min,
-            if (fstVal > max) fstVal else max,
-            arr.tail
-          )
+      def getMinMax2(min: Int, max: Int, arr: Array[Int]): Array[Int] =
+        arr match {
+          case arr if (arr.length == 0) => Array(min, max)
+          case _ => {
+            val fstVal: Int = arr.head
+            getMinMax2(
+              if (fstVal < min) fstVal else min,
+              if (fstVal > max) fstVal else max,
+              arr.tail
+            )
+          }
         }
-      }
       getMinMax2(arr.head, arr.head, arr.tail)
     }
 
