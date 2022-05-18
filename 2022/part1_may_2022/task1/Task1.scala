@@ -2,15 +2,12 @@ object Task1 {
   def main(args: Array[String]): Unit = {
     def fact1(n: Int): Int = {
       @scala.annotation.tailrec
-      def factHelper(acc: Int, n: Int): Int = {
-        if (n < 0) {
-          throw new ArithmeticException("n must be >= 0")
-        } else if (n == 0) {
-          acc
-        } else {
-          factHelper(acc * n, n - 1)
-        }
+      def factHelper(acc: Int, n: Int): Int = acc match {
+        case n if (n < 0)  => throw new ArithmeticException("n must be >= 0")
+        case n if (n == 0) => 1
+        case _             => factHelper(acc * n, n - 1)
       }
+
       factHelper(1, n)
     }
 
