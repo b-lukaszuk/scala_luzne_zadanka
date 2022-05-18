@@ -11,12 +11,9 @@ object Task3_1 {
 
     def getSum2(someNums: Array[Int]): Int = {
       @scala.annotation.tailrec
-      def getSumHelper(acc: Int, someNums: Array[Int]): Int = {
-        if (someNums.length == 0) {
-          acc
-        } else {
-          getSumHelper(acc + someNums.head, someNums.tail)
-        }
+      def getSumHelper(acc: Int, someNums: Array[Int]): Int = someNums match {
+        case someNums if (someNums.length == 0) => acc
+        case _ => getSumHelper(acc + someNums.head, someNums.tail)
       }
       getSumHelper(0, someNums)
     }

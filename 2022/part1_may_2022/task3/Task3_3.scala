@@ -5,13 +5,11 @@ object Task3_3 {
 
     def revArray1(someNums: Array[Int]): Array[Int] = {
       @scala.annotation.tailrec
-      def revArrayHelper(acc: Array[Int], someArr: Array[Int]): Array[Int] = {
-        if (someArr.length == 0) {
-          acc
-        } else {
-          revArrayHelper(someArr.head +: acc, someArr.tail)
+      def revArrayHelper(acc: Array[Int], someArr: Array[Int]): Array[Int] =
+        someArr match {
+          case someArr if (someArr.length == 0) => acc
+          case _ => revArrayHelper(someArr.head +: acc, someArr.tail)
         }
-      }
       revArrayHelper(Array(), someNums)
     }
 
