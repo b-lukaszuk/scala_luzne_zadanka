@@ -21,6 +21,7 @@ object Task5_1 {
     val dowInt: String = dowFormater.format(now)
 
     println("-" * 50)
+    println("Task 5.1")
     println("The current date and time is:")
     println(now)
     println("The day of the week in Polish is:")
