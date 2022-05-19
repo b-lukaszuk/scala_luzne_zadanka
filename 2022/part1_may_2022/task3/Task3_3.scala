@@ -15,7 +15,7 @@ object Task3_3 {
 
     // like in Haskell
     def revArray2(someNums: Array[Int]): Array[Int] = {
-      someNums.foldLeft(Array[Int]())((acc, b) => b +: acc)
+      someNums.foldLeft(Array[Int]())((acc, cur) => cur +: acc)
     }
 
     def revArray3(someNums: Array[Int]): Array[Int] = {
