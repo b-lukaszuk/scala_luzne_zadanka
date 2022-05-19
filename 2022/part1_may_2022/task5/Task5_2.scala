@@ -25,6 +25,7 @@ object Task5_2 {
     println("The current date and time is:")
     println(now)
     println(s"The next Friday is in ${getDaysTill(dowInt)} days")
+    println("That's it. Goodbye!")
     println("-" * 50)
   }
 }

@@ -27,6 +27,7 @@ object Task5_3 {
     println("and create an object with 4 fields (results of +, -, *, /)")
     println("behold:")
     println(returnObjWith4Fields(a, b).toString())
+    println("That's it. Goodbye!")
     println("-" * 50)
   }
 }

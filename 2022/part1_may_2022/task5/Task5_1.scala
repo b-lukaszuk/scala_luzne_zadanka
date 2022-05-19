@@ -26,6 +26,7 @@ object Task5_1 {
     println(now)
     println("The day of the week in Polish is:")
     println(DaysOfWeek.get(dowInt).mkString)
+    println("That's it. Goodbye!")
     println("-" * 50)
   }
 }
