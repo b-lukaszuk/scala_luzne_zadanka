@@ -143,7 +143,7 @@ Write reverse function for String.
 
 ## Task 6.2
 
-Write reverse function for Integer.
+Write reverse function for Integer (or Int for that matter).
 
 # Task 7
 
