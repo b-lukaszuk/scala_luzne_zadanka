@@ -3,6 +3,14 @@ object Task8 {
 
     val max: Int = 101
 
+    def printIndxOfTrue(bools: Array[Boolean], start: Int = 2): Unit = {
+      val end: Int = bools.length - 1
+      for (i <- start to end) {
+        if (bools(i) && i != end) { print(i + ", ") }
+        if (bools(i) && i == end) { println(i) }
+      }
+    }
+
     // uses so called Sieve of Eratosthenes
     def printPrimes(upToIncl: Int): Unit = {
       var isPrime: Array[Boolean] = Array.fill[Boolean](upToIncl + 1)(true)
@@ -15,14 +23,7 @@ object Task8 {
         }
         cur += 1
       }
-      for (i <- 2 to upToIncl) {
-        if (isPrime(i) && i != upToIncl) {
-          print(i + ", ")
-        }
-        if (isPrime(i) && i == upToIncl) {
-          println(i)
-        }
-      }
+      printIndxOfTrue(isPrime)
     }
 
     println("-" * 50)
