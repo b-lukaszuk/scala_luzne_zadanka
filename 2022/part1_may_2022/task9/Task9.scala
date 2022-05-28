@@ -20,6 +20,7 @@ object Task9 {
       println("Be careful while typing a guess.")
       println("Incorrect input (not an Int) will terminate the program")
       println(s"You got ${noOfGuesses} guesses")
+      println("I'll give You a hint after each quess")
     }
 
     def printOutro(): Unit = {
