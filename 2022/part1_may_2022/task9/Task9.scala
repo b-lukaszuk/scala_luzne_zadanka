@@ -12,6 +12,11 @@ object Task9 {
     val secretNum: Int = getRandInt(1, 100)
     var userGuess: Int = 0
     val noOfGuesses: Int = 10
+    var prevGuesses: Set[Int] = Set()
+
+    def addToPrevGuesses(curGuess: Int): Unit = {
+      prevGuesses += curGuess
+    }
 
     def printIntro(): Unit = {
       println("Hello, let's play a game")
@@ -25,7 +30,8 @@ object Task9 {
 
     def printOutro(): Unit = {
       println("Game Over.")
-      println(s"My secret number was ${secretNum}")
+      println(s"My secret number was: ${secretNum}")
+      println(s"Your guesses (unordered) were: ${prevGuesses.mkString(", ")}")
     }
 
     def giveHint(): Unit = {
@@ -40,12 +46,11 @@ object Task9 {
 
     def gameLoop(): Unit = {
       printIntro()
-      var counter: Int = 1
-      while (counter <= noOfGuesses && userGuess != secretNum) {
-        println(s"Guess ${counter} of ${noOfGuesses}:")
+      while (prevGuesses.size < noOfGuesses && userGuess != secretNum) {
+        println(s"Guess ${prevGuesses.size + 1} of ${noOfGuesses}:")
         userGuess = scala.io.StdIn.readInt()
         giveHint()
-        counter += 1
+        addToPrevGuesses(userGuess)
       }
       printOutro()
     }
