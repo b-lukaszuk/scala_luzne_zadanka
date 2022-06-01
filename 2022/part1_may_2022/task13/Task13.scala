@@ -11,12 +11,11 @@ object Task13 {
     }
 
     // only simple sentences, no commas, dots, colons, etc.
-    def convertSentence(sentence: String, toPigLat: Boolean): String = {
-      if (toPigLat) {
-        sentence.split(" ").map(pigLatWord).mkString(" ")
-      } else {
-        sentence.split(" ").map(dePigLatWord).mkString(" ")
-      }
+    def convertSentence(
+        sentence: String,
+        wordConverter: (String) => String
+    ): String = {
+      sentence.split(" ").map(wordConverter).mkString(" ")
     }
 
     val test1: String = "the quick brown fox"
@@ -27,11 +26,11 @@ object Task13 {
     println("Pig latinizing phrase:")
     println(test1)
     println("result:")
-    println(convertSentence(test1, true))
+    println(convertSentence(test1, pigLatWord))
     println("\nDePig latinizing phrase:")
     println(test2)
     println("result:")
-    println(convertSentence(test2, false))
+    println(convertSentence(test2, dePigLatWord))
     println("\nThat's all. Goodbye.")
     println("-" * 30)
   }
