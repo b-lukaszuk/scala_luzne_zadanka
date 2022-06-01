@@ -18,19 +18,25 @@ object Task13 {
       sentence.split(" ").map(wordConverter).mkString(" ")
     }
 
+    def declareConvertion(
+        sentence: String,
+        wordConverter: (String) => String
+    ): Unit = {
+      println("Converting phrase:")
+      println(sentence)
+      println("result:")
+      println(convertSentence(sentence, wordConverter))
+    }
+
     val test1: String = "the quick brown fox"
     val test2: String = "hetay uickqay rownbay oxfay"
 
     println("-" * 30)
     println("Task 13\n")
-    println("Pig latinizing phrase:")
-    println(test1)
-    println("result:")
-    println(convertSentence(test1, pigLatWord))
-    println("\nDePig latinizing phrase:")
-    println(test2)
-    println("result:")
-    println(convertSentence(test2, dePigLatWord))
+    println("To pig latin")
+    declareConvertion(test1, pigLatWord)
+    println("\nTo english")
+    declareConvertion(test2, dePigLatWord)
     println("\nThat's all. Goodbye.")
     println("-" * 30)
   }
