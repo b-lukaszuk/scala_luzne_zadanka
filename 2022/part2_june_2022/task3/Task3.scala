@@ -9,47 +9,61 @@ object Task3 {
         Array("rak", "kajak"),
         Array("medicine", "house med. dr"),
         Array("ala", "emu"),
-        Array("ala", "")
+        Array("ala", ""),
+        Array("Tomek", "tomeczek")
       );
 
-    def getSubstrsOfLen(wrd: String, len: Int): List[String] = {
-      var result: List[String] = List();
+    def getSubstrsOfLen(wrd: String, len: Int): Array[String] = {
+      var result: Array[String] = Array[String]();
       for (i <- 0 to (wrd.length - len)) {
-        result +:= wrd.slice(i, i + len)
+        result :+= wrd.slice(i, i + len)
       }
-      result.reverse;
-    }
-
-    def areWrdsEql(wrd1: String, wrd2: String): Boolean = {
-      wrd1 == wrd2;
+      result;
     }
 
     def isWrdInArr(wrd: String, wrds: Array[String]): Boolean = {
-      var counter: Int = 0;
       var result: Boolean = false;
-      while (counter < wrds.length) {
-        if (areWrdsEql(wrd, wrds(counter))) {
-          counter = wrds.length;
-          result = true;
-        }
-        result;
+      var counter: Int = 0;
+      while (counter < wrds.length && !result) {
+        if (wrd.toLowerCase == wrds(counter).toLowerCase) { result = true }
+        counter += 1;
       }
+      result;
+    }
+
+    def getOverlapOfLen(wrd1: String, wrd2: String, len: Int): String = {
+      var counter: Int = 0;
+      var result: String = "";
+      val wrds1: Array[String] = getSubstrsOfLen(wrd1, len);
+      val wrds2: Array[String] = getSubstrsOfLen(wrd2, len);
+      while (counter < wrds1.length && result == "") {
+        if (isWrdInArr(wrds1(counter), wrds2)) { result = wrds1(counter) }
+        counter += 1;
+      }
+      result.toLowerCase;
     }
 
     def findLongestOverlap(wrd1: String, wrd2: String): String = {
       var counter: Int = wrd1.length.min(wrd2.length);
       var result: String = "";
-      while (counter > 0) {}
+      while (counter > 0 && result == "") {
+        result = getOverlapOfLen(wrd1, wrd2, counter);
+        counter -= 1;
+      }
+      result;
     }
 
-    def testAndDeclare(wrd: String): Unit = {
-      println(s"Testing '${wrd}'");
-      println("First longest palindrome found:");
-      println(getLongestPalindrome(wrd));
+    def testAndDeclare(wrd1: String, wrd2: String): Unit = {
+      println("-")
+      println(
+        s"Testing (case insensitive) '${wrd1}' and '${wrd2}' for overlap"
+      );
+      println(s"result: '${findLongestOverlap(wrd1, wrd2)}'");
+      println("-")
     }
 
     println("-" * 30)
-    wrds.foreach(testAndDeclare(_));
+    wrdsPairs.foreach((a) => testAndDeclare(a(0), a(1)))
     println("-" * 30)
   }
 }
