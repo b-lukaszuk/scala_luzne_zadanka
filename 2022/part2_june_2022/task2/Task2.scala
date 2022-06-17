@@ -1,5 +1,3 @@
-import scala.collection.mutable.HashMap
-
 object Task2 {
   def main(args: Array[String]): Unit = {
 
@@ -13,7 +11,7 @@ object Task2 {
     def getSubstrsOfLen(wrd: String, len: Int): List[String] = {
       var result: List[String] = List();
       for (i <- 0 to (wrd.length - len)) {
-        result +:= wrd.slice(i, i + len)
+        result +:= wrd.slice(i, i + len);
       }
       result.reverse;
     }
@@ -35,8 +33,8 @@ object Task2 {
       println(getLongestPalindrome(wrd));
     }
 
-    println("-" * 30)
+    println("-" * 30);
     wrds.foreach(testAndDeclare(_));
-    println("-" * 30)
+    println("-" * 30);
   }
 }

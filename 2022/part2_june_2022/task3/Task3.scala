@@ -1,5 +1,3 @@
-import scala.collection.mutable.HashMap
-
 object Task3 {
   def main(args: Array[String]): Unit = {
 
@@ -16,7 +14,7 @@ object Task3 {
     def getSubstrsOfLen(wrd: String, len: Int): Array[String] = {
       var result: Array[String] = Array[String]();
       for (i <- 0 to (wrd.length - len)) {
-        result :+= wrd.slice(i, i + len)
+        result :+= wrd.slice(i, i + len);
       }
       result;
     }
@@ -37,7 +35,7 @@ object Task3 {
       val wrds1: Array[String] = getSubstrsOfLen(wrd1, len);
       val wrds2: Array[String] = getSubstrsOfLen(wrd2, len);
       while (counter < wrds1.length && result == "") {
-        if (isWrdInArr(wrds1(counter), wrds2)) { result = wrds1(counter) }
+        if (isWrdInArr(wrds1(counter), wrds2)) { result = wrds1(counter); }
         counter += 1;
       }
       result.toLowerCase;
@@ -54,16 +52,16 @@ object Task3 {
     }
 
     def testAndDeclare(wrd1: String, wrd2: String): Unit = {
-      println("-")
+      println("-");
       println(
         s"Testing (case insensitive) '${wrd1}' and '${wrd2}' for overlap"
       );
       println(s"result: '${findLongestOverlap(wrd1, wrd2)}'");
-      println("-")
+      println("-");
     }
 
-    println("-" * 30)
-    wrdsPairs.foreach((a) => testAndDeclare(a(0), a(1)))
-    println("-" * 30)
+    println("-" * 30);
+    wrdsPairs.foreach((a) => testAndDeclare(a(0), a(1)));
+    println("-" * 30);
   }
 }
