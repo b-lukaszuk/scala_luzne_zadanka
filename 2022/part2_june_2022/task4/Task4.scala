@@ -25,7 +25,6 @@ object Task4 {
     println("-" * 30);
     matr1.multiplyAndPrint(matr2);
     matr1.multiplyAndPrint(matr3);
-    matr1.multiplyAndPrint(matr3);
     matr4.multiplyAndPrint(matr5);
     println("-" * 30);
   }

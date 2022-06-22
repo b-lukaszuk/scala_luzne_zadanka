@@ -15,8 +15,8 @@ class Matrix(val matrix: Array[Array[Int]]) {
     matrix(0).length;
   }
 
-  private def getRow(num: Int): Array[Int] = {
-    matrix(num);
+  private def getRow(rowNum: Int): Array[Int] = {
+    matrix(rowNum);
   }
 
   private def getCol(colNum: Int): Array[Int] = {
@@ -34,7 +34,7 @@ class Matrix(val matrix: Array[Array[Int]]) {
     for (i <- 0 to (arr1.length - 1)) {
       result(i) = arr1(i) * arr2(i)
     }
-    result.reduce((a, b) => a + b);
+    result.reduce((acc, elt) => acc + elt);
   }
 
   // https://www.mathsisfun.com/algebra/matrix-multiplying.html
@@ -53,7 +53,7 @@ class Matrix(val matrix: Array[Array[Int]]) {
   def multiplyAndPrint(other: Matrix): Unit = {
     println("\nmultiplying:");
     println(this.toString);
-    println("by:")
+    println("by:");
     println(other.toString);
     println("result:");
     if (areDimsCompatForMult(other)) {
