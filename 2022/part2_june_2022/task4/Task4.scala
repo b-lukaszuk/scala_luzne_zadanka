@@ -13,9 +13,20 @@ object Task4 {
     val matr3: Matrix = new Matrix(
       Array(Array(7, 8, 9), Array(10, 11, 12))
     );
+    val matr4: Matrix = new Matrix(Array(Array(3, 4, 2)));
+    val matr5: Matrix = new Matrix(
+      Array(
+        Array(13, 9, 7, 15),
+        Array(8, 7, 4, 6),
+        Array(6, 4, 0, 3)
+      )
+    );
 
     println("-" * 30);
-    println(matr1.toString);
+    matr1.multiplyAndPrint(matr2);
+    matr1.multiplyAndPrint(matr3);
+    matr1.multiplyAndPrint(matr3);
+    matr4.multiplyAndPrint(matr5);
     println("-" * 30);
   }
 }

@@ -1,18 +1,32 @@
-package matrix
+package matrix;
 
 class Matrix(val matrix: Array[Array[Int]]) {
+  require(
+    matrix.map(row => row.size).toSet.size == 1,
+    "Matrix requires a non-empty array with the same number of elements per every row"
+  );
 
-  private def nRows(): Int = {
+  private def getNRows(): Int = {
     matrix.length;
   }
 
-  // assumes all rows got equal length
-  private def nCols(): Int = {
+  // assumes all rows are of equal length/size - see require above
+  private def getNCols(): Int = {
     matrix(0).length;
   }
 
+  private def getRow(num: Int): Array[Int] = {
+    matrix(num);
+  }
+
+  private def getCol(colNum: Int): Array[Int] = {
+    var col: Array[Int] = Array[Int]();
+    matrix.foreach(row => { col :+= row(colNum) });
+    col;
+  }
+
   private def areDimsCompatForMult(other: Matrix): Boolean = {
-    this.nCols == other.nRows;
+    this.getNCols == other.getNRows;
   }
 
   private def dotProduct(arr1: Array[Int], arr2: Array[Int]): Int = {
@@ -23,18 +37,32 @@ class Matrix(val matrix: Array[Array[Int]]) {
     result.reduce((a, b) => a + b);
   }
 
-//   private def multiply(other: Matrix) = {}
+  // https://www.mathsisfun.com/algebra/matrix-multiplying.html
+  private def mult(other: Matrix): Array[Array[Int]] = {
+    var result: Array[Array[Int]] = Array[Array[Int]]();
+    for (r1 <- 0 to (this.getNRows - 1)) {
+      var row: Array[Int] = Array[Int]();
+      for (c2 <- 0 to (other.getNCols - 1)) {
+        row :+= this.dotProduct(this.getRow(r1), other.getCol(c2));
+      }
+      result :+= row;
+    }
+    result;
+  }
 
-// https://www.mathsisfun.com/algebra/matrix-multiplying.html
-//   def mult(other: Matrix) = {
-//     if (areDimsCompatForMult(other)) {
-//       // multiply
-//     } else {
-//       throw new ArithmeticException(
-//         "in [r1, c1] * [r2, c2] c1 must be equal to r2"
-//       );
-//     }
-//   }
+  def multiplyAndPrint(other: Matrix): Unit = {
+    println("\nmultiplying:");
+    println(this.toString);
+    println("by:")
+    println(other.toString);
+    println("result:");
+    if (areDimsCompatForMult(other)) {
+      println(new Matrix(mult(other)).toString);
+    } else {
+      println("Error in [r1, c1]*[r2, c2]. c1 not equal to r2");
+    }
+    println();
+  }
 
   override def toString(): String = {
     matrix
