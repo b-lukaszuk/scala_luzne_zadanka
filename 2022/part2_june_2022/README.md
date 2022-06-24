@@ -55,7 +55,6 @@ Write a computer simulation to calculate the probability specified above (say 10
 List of assumptions:
 + every year got exactly 365 days
 + people's births are distributed equaly throughout the year (uniform distribution)
-+ use only standard Python's libraries (the one you get without pip-ing)
 
 # Task 6
 
