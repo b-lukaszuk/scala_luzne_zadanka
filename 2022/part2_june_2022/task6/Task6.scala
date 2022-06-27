@@ -20,26 +20,26 @@ object Task6 {
 
     def getNextGuess(
         prevGuess: Int,
-        atRandom: Boolean,
-        cardsInCupboard: List[Int] = cupboard
+        atRandom: Boolean = true,
+        cards: List[Int] = cupboard
     ): Int = {
       if (atRandom) {
-        cardsInCupboard(getRandInt(0, noOfCards));
+        cards(getRandInt(0, cards.size));
       } else {
-        cardsInCupboard(prevGuess);
+        cards(prevGuess);
       }
     }
 
     def didPrisFoundCard(
         prisId: Int,
         noOfGuesses: Int,
-        atRandom: Boolean = true
+        atRandom: Boolean = true,
+        cards: List[Int] = cupboard
     ): Boolean = {
       var result: Boolean = false;
       var counter: Int = 0;
-      var prevGuess: Int = cupboard(getRandInt(0, noOfCards));
+      var prevGuess: Int = cards(getRandInt(0, noOfCards));
       while (!result && counter < noOfGuesses) {
-        println(s"cur guess: ${prevGuess}");
         if (prisId == prevGuess) {
           result = true;
         } else {
@@ -54,9 +54,9 @@ object Task6 {
     println("-" * 30);
     println(cupboard.mkString(", "));
     println("random guesses")
-    didPrisFoundCard(0, 10, true);
+    println(didPrisFoundCard(0, 10, true));
     println("strategical guesses")
-    didPrisFoundCard(0, 10, false);
+    println(didPrisFoundCard(0, 10, false));
     println("That's all. Goodbye!");
     println("-" * 30);
   }
