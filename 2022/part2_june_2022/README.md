@@ -8,6 +8,7 @@
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
+7. [Task 7](#task-7)
 ---
 
 The tasks (Task 1 - Task 5) were copied-pasted from [here](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part4_24_06_2021).
@@ -86,3 +87,30 @@ Simulate several thousand instances of the game where the prisoners use the opti
 - If the card within has his number then he succeeds otherwise he opens the drawer with the same number as that of the revealed card. (until he opens his maximum).
 
 Show and compare the computed probabilities of success for the two strategies.
+
+# Task 7
+
+[Go to: Table of contents](#table-of-contents)
+
+A task from: "Java in Two Semesters. Fourth edition" by Quentin Charatan and Aaron Kans.
+Chapter 5. Methods.
+
+> 5. (a) Write a menu-driven program that provides three options:
+>
+> - the first option allows the user to enter a temperature in Celsius and displays
+> the corresponding Fahrenheit temperature;
+>
+> - the second option allows the user to enter a temperature in Fahrenheit and
+> displays the corresponding Celsius temperature;
+>
+> - the third option allows the user to quit.
+>
+> The formulae that you need are as follows, where C represents a Celsius temperature
+> and F a Fahrenheit temperature:
+>
+> F = (9C/5) + 32
+>
+> C = (5(F-32))/9
+>
+> (b) Adapt the above program so that the user is not allowed to enter a tem-
+> perature below absolute zero; this is −273.15C, or −459.67F.
