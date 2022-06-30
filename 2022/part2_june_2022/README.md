@@ -9,6 +9,7 @@
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
 7. [Task 7](#task-7)
+8. [Task 8](#task-8)
 ---
 
 The tasks (Task 1 - Task 5) were copied-pasted from [here](https://github.com/b-lukaszuk/haskell_luzne_zadanka/tree/master/part4_24_06_2021).
@@ -114,3 +115,28 @@ Chapter 5. Methods.
 >
 > (b) Adapt the above program so that the user is not allowed to enter a tem-
 > perature below absolute zero; this is −273.15C, or −459.67F.
+
+# Task 8
+
+[Go to: Table of contents](#table-of-contents)
+
+[21 game from on rosettacode webpage](https://rosettacode.org/wiki/21_game)
+
+21 is a two player game, the game is played by choosing a number (1, 2, or 3) to be added to the running total.
+
+The game is won by the player whose chosen number causes the running total to reach exactly 21.
+
+The running total starts at zero. One player will be the computer.
+
+Players alternate supplying a number to be added to the running total.
+
+## Description
+
+Write a computer program that will:
+- do the prompting (or provide a button menu),
+- check for errors and display appropriate error messages,
+- do the additions (add a chosen number to the running total),
+- display the running total,
+- provide a mechanism for the player to quit/exit/halt/stop/close the program,
+- issue a notification when there is a winner, and
+- determine who goes first (maybe a random or user choice, or can be specified when the game begins).
