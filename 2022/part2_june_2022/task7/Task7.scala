@@ -1,6 +1,9 @@
 object Task7 {
   def main(args: Array[String]): Unit = {
 
+    var shouldEndProgram: Boolean = false;
+    var usersChoice: Int = 0;
+
     def fahrenheitToCelsius(fahrenheit: Double): Double = {
       (5 * (fahrenheit - 32)) / 9
     }
@@ -19,8 +22,24 @@ object Task7 {
       println("Type Your choice:");
     }
 
+    def programLoop(): Unit = {
+      while (!shouldEndProgram) {
+        printMenu();
+        usersChoice = scala.io.StdIn.readInt();
+        if (usersChoice == 3) {
+          shouldEndProgram = true;
+          println("quitting the program");
+        } else {
+          println(s"You typed: ${usersChoice}")
+          println("quitting the program");
+          shouldEndProgram = true;
+        }
+      }
+    }
+
     println("Task 7");
     println("-" * 30);
+    programLoop();
     println("That's all. Goodbye!");
     println("-" * 30);
   }
