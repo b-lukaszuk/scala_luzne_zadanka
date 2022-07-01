@@ -113,8 +113,7 @@ Chapter 5. Methods.
 >
 > C = (5(F-32))/9
 >
-> (b) Adapt the above program so that the user is not allowed to enter a tem-
-> perature below absolute zero; this is −273.15C, or −459.67F.
+> (b) Adapt the above program so that the user is not allowed to enter a temperature below absolute zero; this is −273.15C, or −459.67F.
 
 # Task 8
 
