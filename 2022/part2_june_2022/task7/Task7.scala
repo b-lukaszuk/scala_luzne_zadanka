@@ -30,20 +30,23 @@ object Task7 {
       println("Type Your choice:");
     }
 
-    def askForTemperature(): Unit = {
+    def askForTempSetUsersInputDegrees(): Unit = {
       print("Enter temperature in ");
       println(s"${if (isInputFahrenheit) "fahrenheit" else "celsius"}");
       usersInputDegrees = scala.io.StdIn.readDouble();
     }
 
-    def declareConvertion(): Unit = {
+    def declareConvertion(
+        temp: Double = usersInputDegrees,
+        isTempInFahrenheit: Boolean = isInputFahrenheit
+    ): Unit = {
       var result: Double =
-        if (isInputFahrenheit) fahrenheitToCelsius()
+        if (isTempInFahrenheit) fahrenheitToCelsius(temp)
         else celsiusToFahrenheit()
-      print(s"${usersInputDegrees}");
-      print(s"${if (isInputFahrenheit) "F" else "C"} = ");
+      print(s"${temp}");
+      print(s"${if (isTempInFahrenheit) "F" else "C"} = ");
       print(f"$result%.2f");
-      println(s"${if (isInputFahrenheit) "C" else "F"}");
+      println(s"${if (isTempInFahrenheit) "C" else "F"}");
     }
 
     def handleUsersMenuChoice(): Unit = {
@@ -60,7 +63,7 @@ object Task7 {
     def programLoop(): Unit = {
       printMenu();
       handleUsersMenuChoice();
-      askForTemperature();
+      askForTempSetUsersInputDegrees();
       if (isAboveAbsolute0()) {
         println("The temperature must be above 0 degrees Kelvin");
         println("Nothing to do.");
