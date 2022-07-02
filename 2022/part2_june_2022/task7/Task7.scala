@@ -13,6 +13,13 @@ object Task7 {
       (9 * celsius / 5) + 32
     }
 
+    def isAboveAbsolute0(
+        temp: Double = usersInputDegrees,
+        isFahrenheit: Boolean = isInputFahrenheit
+    ): Boolean = {
+      if (isFahrenheit) temp < -459.67 else temp < -273.15
+    }
+
     def printMenu(): Unit = {
       println("-" * 5);
       println("What do You want to do?")
@@ -39,7 +46,7 @@ object Task7 {
       println(s"${if (isInputFahrenheit) "C" else "F"}");
     }
 
-    def handleUsersChoice(): Unit = {
+    def handleUsersMenuChoice(): Unit = {
       usersChoiceInMenu = scala.io.StdIn.readInt();
       usersChoiceInMenu match {
         case 1 => isInputFahrenheit = true
@@ -52,9 +59,12 @@ object Task7 {
     // no actual loop here
     def programLoop(): Unit = {
       printMenu();
-      handleUsersChoice();
-      if (usersChoiceInMenu == 1 || usersChoiceInMenu == 2) {
-        askForTemperature();
+      handleUsersMenuChoice();
+      askForTemperature();
+      if (isAboveAbsolute0()) {
+        println("The temperature must be above 0 degrees Kelvin");
+        println("Nothing to do.");
+      } else if (usersChoiceInMenu == 1 || usersChoiceInMenu == 2) {
         declareConvertion();
       }
     }
