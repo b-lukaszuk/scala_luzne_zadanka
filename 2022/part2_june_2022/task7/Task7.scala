@@ -32,7 +32,7 @@ object Task7 {
       );
     }
 
-    def askForTempSetUsersInputDegrees(): Unit = {
+    def askForTempAndSetUsersInputDegrees(): Unit = {
       print("Enter the temperature (e.g. 10.8) in ");
       println(s"${if (isInputFahrenheit) "fahrenheit" else "celsius"}");
       println("(Be careful, wrong input may crash the program):");
@@ -67,13 +67,13 @@ object Task7 {
       printMenu();
       handleUsersMenuChoice();
       if (usersChoiceInMenu != 0) {
-        askForTempSetUsersInputDegrees();
-      }
-      if (isBelowAbsolute0()) {
-        println("The temperature must be above 0 degrees Kelvin");
-        println("Nothing to do.");
-      } else if (usersChoiceInMenu != 0) {
-        declareConvertion();
+        askForTempAndSetUsersInputDegrees();
+        if (isBelowAbsolute0()) {
+          println("The temperature must be above 0 degrees Kelvin");
+          println("Nothing to do.");
+        } else {
+          declareConvertion();
+        }
       }
     }
 
