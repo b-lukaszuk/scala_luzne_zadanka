@@ -27,12 +27,15 @@ object Task7 {
       println("2. convert Celsius -> Fahrenheit");
       println("3. quit");
       println("-" * 5);
-      println("Type Your choice:");
+      println(
+        "Type Your choice (be careful, wrong input may crash the program):"
+      );
     }
 
     def askForTempSetUsersInputDegrees(): Unit = {
-      print("Enter temperature in ");
+      print("Enter the temperature (e.g. 10.8) in ");
       println(s"${if (isInputFahrenheit) "fahrenheit" else "celsius"}");
+      println("(Be careful, wrong input may crash the program):");
       usersInputDegrees = scala.io.StdIn.readDouble();
     }
 
