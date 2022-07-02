@@ -5,11 +5,11 @@ object Task7 {
     var isInputFahrenheit: Boolean = true;
     var usersInputDegrees: Double = 0;
 
-    def fahrenheitToCelsius(fahrenheit: Double): Double = {
+    def fahrenheitToCelsius(fahrenheit: Double = usersInputDegrees): Double = {
       (5 * (fahrenheit - 32)) / 9
     }
 
-    def celsiusToFahrenheit(celsius: Double): Double = {
+    def celsiusToFahrenheit(celsius: Double = usersInputDegrees): Double = {
       (9 * celsius / 5) + 32
     }
 
@@ -31,8 +31,8 @@ object Task7 {
 
     def declareConvertion(): Unit = {
       var result: Double =
-        if (isInputFahrenheit) fahrenheitToCelsius(usersInputDegrees)
-        else celsiusToFahrenheit(usersInputDegrees)
+        if (isInputFahrenheit) fahrenheitToCelsius()
+        else celsiusToFahrenheit()
       print(s"${usersInputDegrees}");
       print(s"${if (isInputFahrenheit) "F" else "C"} = ");
       print(f"$result%.2f");
