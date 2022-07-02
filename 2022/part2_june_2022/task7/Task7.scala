@@ -1,8 +1,8 @@
 object Task7 {
   def main(args: Array[String]): Unit = {
 
-    var usersChoice: Int = 0;
-    var convertToCelsius: Boolean = true;
+    var usersChoiceInMenu: Int = 0;
+    var isInputFahrenheit: Boolean = true;
     var usersInputDegrees: Double = 0;
 
     def fahrenheitToCelsius(fahrenheit: Double): Double = {
@@ -25,25 +25,25 @@ object Task7 {
 
     def askForTemperature(): Unit = {
       print("Enter temperature in ");
-      println(s"${if (convertToCelsius) "fahrenheit" else "celsius"}");
+      println(s"${if (isInputFahrenheit) "fahrenheit" else "celsius"}");
       usersInputDegrees = scala.io.StdIn.readDouble();
     }
 
     def declareConvertion(): Unit = {
       var result: Double =
-        if (convertToCelsius) fahrenheitToCelsius(usersInputDegrees)
+        if (isInputFahrenheit) fahrenheitToCelsius(usersInputDegrees)
         else celsiusToFahrenheit(usersInputDegrees)
       print(s"${usersInputDegrees}");
-      print(s"${if (convertToCelsius) "F" else "C"} = ");
+      print(s"${if (isInputFahrenheit) "F" else "C"} = ");
       print(f"$result%.2f");
-      println(s"${if (convertToCelsius) "C" else "F"}");
+      println(s"${if (isInputFahrenheit) "C" else "F"}");
     }
 
     def handleUsersChoice(): Unit = {
-      usersChoice = scala.io.StdIn.readInt();
-      usersChoice match {
-        case 1 => convertToCelsius = true
-        case 2 => convertToCelsius = false
+      usersChoiceInMenu = scala.io.StdIn.readInt();
+      usersChoiceInMenu match {
+        case 1 => isInputFahrenheit = true
+        case 2 => isInputFahrenheit = false
         case 3 => println("Quitting the program.");
         case _ => println("Wrong input. Nothing to do.");
       }
@@ -53,7 +53,7 @@ object Task7 {
     def programLoop(): Unit = {
       printMenu();
       handleUsersChoice();
-      if (usersChoice == 1 || usersChoice == 2) {
+      if (usersChoiceInMenu == 1 || usersChoiceInMenu == 2) {
         askForTemperature();
         declareConvertion();
       }
