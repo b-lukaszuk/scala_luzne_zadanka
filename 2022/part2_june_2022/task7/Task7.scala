@@ -13,7 +13,7 @@ object Task7 {
       (9 * celsius / 5) + 32
     }
 
-    def isAboveAbsolute0(
+    def isBelowAbsolute0(
         temp: Double = usersInputDegrees,
         isFahrenheit: Boolean = isInputFahrenheit
     ): Boolean = {
@@ -57,8 +57,8 @@ object Task7 {
       usersChoiceInMenu match {
         case 1 => isInputFahrenheit = true
         case 2 => isInputFahrenheit = false
-        case 3 => println("Quitting the program.");
-        case _ => println("Wrong input. Nothing to do.");
+        case 3 => usersChoiceInMenu = 0;
+        case _ => usersChoiceInMenu = 0;
       }
     }
 
@@ -66,11 +66,13 @@ object Task7 {
     def programLoop(): Unit = {
       printMenu();
       handleUsersMenuChoice();
-      askForTempSetUsersInputDegrees();
-      if (isAboveAbsolute0()) {
+      if (usersChoiceInMenu != 0) {
+        askForTempSetUsersInputDegrees();
+      }
+      if (isBelowAbsolute0()) {
         println("The temperature must be above 0 degrees Kelvin");
         println("Nothing to do.");
-      } else if (usersChoiceInMenu == 1 || usersChoiceInMenu == 2) {
+      } else if (usersChoiceInMenu != 0) {
         declareConvertion();
       }
     }
@@ -78,6 +80,7 @@ object Task7 {
     println("Wellcome to temperature converter");
     programLoop();
     println("That's all. Goodbye!");
+    println("Quitting the program.")
     println("-" * 30);
   }
 }
