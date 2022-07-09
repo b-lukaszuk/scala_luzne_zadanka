@@ -1,5 +1,20 @@
+import scala.util.Random;
 object Task8 {
   def main(args: Array[String]): Unit = {
+
+    val goal: Int = 21;
+    var total: Int = 0;
+
+    def getRandInt(minIncl: Int, maxExcl: Int): Int = {
+      val rnd: Random = new Random
+      minIncl + rnd.nextInt(maxExcl - minIncl)
+    }
+
+    def getNumToAddToTotal(): Int = {
+      val difference: Int = total - goal;
+      if (difference <= 3) difference else getRandInt(1, 4)
+    }
+
     def printGameDescription(): Unit = {
       println("-" * 20)
       println("Game description")
