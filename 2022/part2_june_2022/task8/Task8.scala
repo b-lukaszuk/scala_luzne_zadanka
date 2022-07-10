@@ -76,6 +76,7 @@ object Task8 {
       printGameDescription();
 
       while (!isGameOver) {
+        println();
         total += declareAndGetComputerInput();
         isGameOver = (total >= goal);
         declareCurrentGameStatus();
@@ -88,6 +89,7 @@ object Task8 {
           isUserOnMove = !isUserOnMove;
         }
       }
+      println();
     }
 
     gameLoop();
