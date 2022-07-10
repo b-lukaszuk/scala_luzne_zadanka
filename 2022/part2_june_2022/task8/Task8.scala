@@ -14,11 +14,13 @@ object Task8 {
     }
 
     def getNumToAddToTotal(): Int = {
-      val difference: Int = total - goal;
+      val difference: Int = goal - total;
       if (difference <= 3) difference else getRandInt(1, 4)
     }
 
-    def declareAndGetComputerInput(numGenerator: () => Int): Int = {
+    def declareAndGetComputerInput(
+        numGenerator: () => Int = getNumToAddToTotal
+    ): Int = {
       val num123: Int = getNumToAddToTotal();
       println(s"Computer: I add ${num123} to the total")
       num123
@@ -71,12 +73,25 @@ object Task8 {
     }
 
     def gameLoop(): Unit = {
-      println("game loop");
+      printGameDescription();
+
+      while (!isGameOver) {
+        total += declareAndGetComputerInput();
+        isGameOver = (total >= goal);
+        declareCurrentGameStatus();
+        isUserOnMove = !isUserOnMove;
+
+        if (!isGameOver) {
+          total += promptUserAndGetInput();
+          isGameOver = (total >= goal);
+          declareCurrentGameStatus();
+          isUserOnMove = !isUserOnMove;
+        }
+      }
     }
 
-    printGameDescription();
     gameLoop();
-    promptUserAndGetInput();
+    println("-" * 30);
     println("That's all. Goodbye!");
   }
 }
