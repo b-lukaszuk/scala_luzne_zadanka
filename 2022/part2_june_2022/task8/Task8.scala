@@ -5,6 +5,8 @@ object Task8 {
 
     val goal: Int = 21;
     var total: Int = 0;
+    var isGameOver: Boolean = false;
+    var isUserOnMove: Boolean = false;
 
     def getRandInt(minIncl: Int, maxExcl: Int): Int = {
       val rnd: Random = new Random
@@ -14,6 +16,29 @@ object Task8 {
     def getNumToAddToTotal(): Int = {
       val difference: Int = total - goal;
       if (difference <= 3) difference else getRandInt(1, 4)
+    }
+
+    def declareAndGetComputerInput(numGenerator: () => Int): Int = {
+      val num123: Int = getNumToAddToTotal();
+      println(s"Computer: I add ${num123} to the total")
+      num123
+    }
+
+    def declareWinnerOrLoser(curTotal: Int = total, goal: Int = goal): Unit = {
+      val who: String = if (isUserOnMove) "User" else "Computer";
+      val winnerOrLoser: String = if (curTotal == goal) "Winner" else "Loser";
+      println(s"${winnerOrLoser}: ${who}");
+    }
+
+    def declareCurrentGameStatus(
+        curTotal: Int = total,
+        goal: Int = goal
+    ): Unit = {
+      println(s"The total is now equal to ${curTotal}");
+      if (curTotal >= goal) {
+        println("Game Over.");
+        declareWinnerOrLoser();
+      }
     }
 
     def promptUserAndGetInput(): Int = {
