@@ -1,3 +1,4 @@
+import scala.io.StdIn.readLine;
 import scala.util.Random;
 object Task8 {
   def main(args: Array[String]): Unit = {
@@ -13,6 +14,18 @@ object Task8 {
     def getNumToAddToTotal(): Int = {
       val difference: Int = total - goal;
       if (difference <= 3) difference else getRandInt(1, 4)
+    }
+
+    def promptUserAndGetInput(): Int = {
+      var usersInput: String = "";
+      var isInputCorrect: Boolean = false;
+      while (!isInputCorrect) {
+        println("Type your number (Integer: 1, 2, or 3) to add to the total:");
+        usersInput = readLine().trim();
+        isInputCorrect = Array("1", "2", "3").contains(usersInput);
+        if (!isInputCorrect) { println("Wrong input try again!") }
+      }
+      usersInput.toInt;
     }
 
     def printGameDescription(): Unit = {
@@ -38,6 +51,7 @@ object Task8 {
 
     printGameDescription();
     gameLoop();
+    promptUserAndGetInput();
     println("That's all. Goodbye!");
   }
 }
