@@ -6,12 +6,12 @@ object Task8 {
     val goal: Int = 21;
     var total: Int = 0;
     var isGameOver: Boolean = false;
-    var isUserOnMove: Boolean = false;
 
     def getRandInt(minIncl: Int, maxExcl: Int): Int = {
       val rnd: Random = new Random
       minIncl + rnd.nextInt(maxExcl - minIncl)
     }
+    var isUserOnMove: Boolean = if (getRandInt(0, 2) == 0) true else false;
 
     def getNumToAddToTotal(): Int = {
       val difference: Int = goal - total;
@@ -59,7 +59,7 @@ object Task8 {
       println("-" * 20)
       println("Game description")
       println("There are two players: human and computer");
-      println("The players start with total = 0");
+      println("The players start with total = 0 (common for both the players)");
       println("The players take turns");
       println("During their turn a player adds 1, 2, or 3 to the total");
       println(
@@ -69,27 +69,42 @@ object Task8 {
         "If after the addition the total is greater than 21 the player at move loses the game"
       );
       println("If not, the other player takes turn");
+      println(
+        "The Player to move first is set at random at the beginning of the game"
+      );
       println("-" * 20)
     }
 
+    def handleComputerPlayerMove(): Unit = {
+      println("--Computer Player move--")
+      total += declareAndGetComputerInput();
+      isGameOver = (total >= goal);
+      declareCurrentGameStatus();
+      isUserOnMove = !isUserOnMove;
+    }
+
+    def handleHumanPlayerMove(): Unit = {
+      println("--Human Player move--")
+      total += promptUserAndGetInput();
+      isGameOver = (total >= goal);
+      declareCurrentGameStatus();
+      isUserOnMove = !isUserOnMove;
+    }
+
     def gameLoop(): Unit = {
+
       printGameDescription();
+      declareCurrentGameStatus();
+      println();
 
       while (!isGameOver) {
-        println();
-        total += declareAndGetComputerInput();
-        isGameOver = (total >= goal);
-        declareCurrentGameStatus();
-        isUserOnMove = !isUserOnMove;
-
-        if (!isGameOver) {
-          total += promptUserAndGetInput();
-          isGameOver = (total >= goal);
-          declareCurrentGameStatus();
-          isUserOnMove = !isUserOnMove;
+        if (isUserOnMove) {
+          handleHumanPlayerMove();
+        } else {
+          handleComputerPlayerMove();
         }
+        println();
       }
-      println();
     }
 
     gameLoop();
