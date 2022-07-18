@@ -49,7 +49,7 @@ object Task8 {
       while (!isInputCorrect) {
         println("Type your number (Integer: 1, 2, or 3) to add to the total:");
         usersInput = readLine().trim();
-        isInputCorrect = Array("1", "2", "3").contains(usersInput);
+        isInputCorrect = Array("0", "1", "2", "3").contains(usersInput);
         if (!isInputCorrect) { println("Wrong input try again!") }
       }
       usersInput.toInt;
@@ -72,23 +72,31 @@ object Task8 {
       println(
         "The Player to move first is set at random at the beginning of the game"
       );
+      println("IF YOU WANT TO TERMINATE THE GAME TYPE 0 ANYTIME ON YOUR TURN.");
       println("-" * 20)
     }
 
-    def handleComputerPlayerMove(): Unit = {
-      println("--Computer Player move--")
-      total += declareAndGetComputerInput();
-      isGameOver = (total >= goal);
-      declareCurrentGameStatus();
-      isUserOnMove = !isUserOnMove;
+    def getInputFromUserOrComputer(): Int = {
+      var nextNumber: Int = 0;
+      if (isUserOnMove) {
+        nextNumber = promptUserAndGetInput();
+      } else {
+        nextNumber = declareAndGetComputerInput();
+      }
+      nextNumber;
     }
 
-    def handleHumanPlayerMove(): Unit = {
-      println("--Human Player move--")
-      total += promptUserAndGetInput();
-      isGameOver = (total >= goal);
-      declareCurrentGameStatus();
-      isUserOnMove = !isUserOnMove;
+    def handlePlayerMove(): Unit = {
+      val nextNumber: Int = getInputFromUserOrComputer();
+      if (nextNumber == 0) {
+        isGameOver = true;
+        println("You typed 0. Leaving the game.")
+      } else {
+        total += nextNumber;
+        isGameOver = (total >= goal);
+        declareCurrentGameStatus();
+        isUserOnMove = !isUserOnMove;
+      }
     }
 
     def gameLoop(): Unit = {
@@ -98,11 +106,7 @@ object Task8 {
       println();
 
       while (!isGameOver) {
-        if (isUserOnMove) {
-          handleHumanPlayerMove();
-        } else {
-          handleComputerPlayerMove();
-        }
+        handlePlayerMove();
         println();
       }
     }
