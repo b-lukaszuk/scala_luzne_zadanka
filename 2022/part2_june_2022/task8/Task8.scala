@@ -1,8 +1,9 @@
 import scala.io.StdIn.readLine;
 import scala.util.Random;
-object Task8 {
-  def main(args: Array[String]): Unit = {
 
+object Task8 {
+
+  def main(args: Array[String]): Unit = {
     val goal: Int = 21;
     var total: Int = 0;
     var isGameOver: Boolean = false;
@@ -11,6 +12,7 @@ object Task8 {
       val rnd: Random = new Random
       minIncl + rnd.nextInt(maxExcl - minIncl)
     }
+
     var isUserOnMove: Boolean = if (getRandInt(0, 2) == 0) true else false;
 
     def getNumToAddToTotal(): Int = {
@@ -100,11 +102,9 @@ object Task8 {
     }
 
     def gameLoop(): Unit = {
-
       printGameDescription();
       declareCurrentGameStatus();
       println();
-
       while (!isGameOver) {
         handlePlayerMove();
         println();
