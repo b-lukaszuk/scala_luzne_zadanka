@@ -2,4 +2,5 @@
 
 Selected tasks from M. C. Lewis, L. L. Lacher "Introduction to programming and problem solving using Scala" 2nd ed.
 
-Tasks will be solved at a whim, it is possible that I modify some of them
+Tasks will be solved at a whim, it is possible that I modify some of them.
+For better visual clarity I will not give any quotations.
