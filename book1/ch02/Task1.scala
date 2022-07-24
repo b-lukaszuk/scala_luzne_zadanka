@@ -1,5 +1,3 @@
-import scala.io.Source
-
 object Task1 {
   def main(args: Array[String]): Unit = {
 
@@ -47,8 +45,7 @@ object Task1 {
     println("Task 1.");
     println("Decimal <-> Binary converter\n");
     declareConvertionToBinary(decimals);
-    println("\nThat's all. Goodbye!")
+    println("That's all. Goodbye!")
     println("-" * 30);
   }
-
 }
