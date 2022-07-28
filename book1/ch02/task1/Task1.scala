@@ -2,6 +2,8 @@ object Task1 {
   def main(args: Array[String]): Unit = {
 
     val decimals: Array[Int] = Array(0, 1, 2, 3, 4, 10, 12, 24, 33);
+    val binaries: Array[String] =
+      Array("0010 0101", "0001", "0101 1010", "0010", "0011 0101", "0000");
 
     // condition: binaryString.length % 4 = 0
     def insertSpaceEvery4Chars(binaryString: String): String = {
@@ -41,10 +43,34 @@ object Task1 {
       })
     }
 
+    def convertBinaryStringToDecimal(binaryString: String): Int = {
+      val reversedBinaryString: String =
+        binaryString.replaceAll("\\s", "").reverse;
+      var result: Double = 0;
+      for (i <- 0 to (reversedBinaryString.length - 1)) {
+        result += (reversedBinaryString.substring(i, i + 1).toInt * scala.math
+          .pow(2, i));
+      }
+      result.toInt;
+    }
+
+    def declareConvertionToDecimal(binaries: Array[String]): Unit = {
+      binaries.foreach((binary) => {
+        println(s"Converting ${binary} (binary) to decimal");
+        println(s"My function: ${convertBinaryStringToDecimal(binary)}");
+        println(
+          s"Build-in function: ${Integer.parseInt(binary.replaceAll("\\s", ""), 2)}\n"
+        );
+      })
+    }
+
     println("-" * 30);
     println("Task 1.");
     println("Decimal <-> Binary converter\n");
+    println("First, Decimal -> Binary\n");
     declareConvertionToBinary(decimals);
+    println("Now, Binary -> Decimal\n");
+    declareConvertionToDecimal(binaries);
     println("That's all. Goodbye!")
     println("-" * 30);
   }
