@@ -23,7 +23,7 @@ object Task1 {
       insertSpaceEvery4Chars(result);
     }
 
-    def decimalToBinaryString(decimal: Int): String = {
+    def formatDecimalToBinaryString(decimal: Int): String = {
       var result: String = if (decimal == 0) "0" else "";
       var afterDivision: Int = decimal;
       while (afterDivision != 0) {
@@ -36,7 +36,7 @@ object Task1 {
     def declareConvertionToBinary(decimals: Array[Int]): Unit = {
       decimals.foreach((decimal) => {
         println(s"Converting ${decimal} (decimal) to binary");
-        println(s"My function: ${decimalToBinaryString(decimal)}");
+        println(s"My function: ${formatDecimalToBinaryString(decimal)}");
         println(s"Build-in function: ${decimal.toBinaryString}\n");
       })
     }
