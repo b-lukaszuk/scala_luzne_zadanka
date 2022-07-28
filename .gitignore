@@ -7,8 +7,6 @@
 # except specific file extensions
 !*.md
 !*.scala
-!*.sbt
-!*.conf
 !*.txt
 # except subdirectories (neccessary for the file extensions above to work correctly)
 !*/
