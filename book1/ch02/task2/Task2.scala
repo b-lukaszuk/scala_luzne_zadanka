@@ -1,7 +1,7 @@
 object Task1 {
   def main(args: Array[String]): Unit = {
     val annualInterestsInDecimal: Double = 0.07;
-    val formatter = java.text.NumberFormat.getCurrencyInstance
+    val formatter = java.text.NumberFormat.getCurrencyInstance;
     val goal: Double = 1000000;
     val monthlySavingUSD: Double = 700;
     val monthsInYear: Int = 12;
@@ -45,14 +45,14 @@ object Task1 {
       println(s"Account balance after ${savingTimeInYears} years:");
       println(formatter.format(accountBalance));
       println(s"Will she be a millionaire? ${accountBalance >= goal}\n");
-      println("WARNING! NO GUARANTEE THAT THE RESULT IS CORRECT!\n")
+      println("WARNING! NO GUARANTEE THAT THE RESULT IS CORRECT!\n");
     }
 
     println("-" * 30);
     println("Task 2.\n");
     printTaskDescription();
     declareResultsOfSimulation();
-    println("That's all. Goodbye!")
+    println("That's all. Goodbye!");
     println("-" * 30);
   }
 }
