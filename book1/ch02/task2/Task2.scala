@@ -1,4 +1,4 @@
-object Task1 {
+object Task2 {
   def main(args: Array[String]): Unit = {
     val annualInterestsInDecimal: Double = 0.07;
     val formatter = java.text.NumberFormat.getCurrencyInstance;
