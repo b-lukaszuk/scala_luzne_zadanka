@@ -35,5 +35,5 @@ Write a script that will calculate how far a projectile will go given a launch s
 
 [Go to: Table of contents](#table-of-contents)
 
-Kepler’s third law of planetary motion says that P 2 ∝ a3 , where P is the orbital period, and a is the semi-major axis of the orbit. For our Sun, if you measure P in years and a in Astronomical Units (AU), the proportionality becomes equality. Look up the semi-major axis values for three bodies in our solar system other than the Earth and use Scala as a calculator to find the period according to Kepler’s third law.
+Kepler’s third law of planetary motion says that P^2 ∝ a^3 , where P is the orbital period, and a is the semi-major axis of the orbit. For our Sun, if you measure P in years and a in Astronomical Units (AU), the proportionality becomes equality. Look up the semi-major axis values for three bodies in our solar system other than the Earth and use Scala as a calculator to find the period according to Kepler’s third law.
 
