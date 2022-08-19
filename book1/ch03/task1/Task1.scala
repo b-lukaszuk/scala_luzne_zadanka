@@ -12,7 +12,7 @@ object Task1 {
     }
 
     def isPointInUnitCircle(x: Double, y: Double): Boolean = {
-      "%.1f".format(calculateDistanceFromX0Y0(x, y)).toDouble <= 1;
+      scala.math.round(calculateDistanceFromX0Y0(x, y)) <= 1;
     }
 
     def printProgramDescription(): Unit = {
