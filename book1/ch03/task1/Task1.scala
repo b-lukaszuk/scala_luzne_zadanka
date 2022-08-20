@@ -12,7 +12,7 @@ object Task1 {
     }
 
     def isPointInUnitCircle(x: Double, y: Double): Boolean = {
-      scala.math.round(calculateDistanceFromX0Y0(x, y)) <= 1;
+      calculateDistanceFromX0Y0(x, y) <= 1;
     }
 
     def printProgramDescription(): Unit = {
@@ -21,7 +21,6 @@ object Task1 {
       );
       println("(a circle centered on the origin with radius 1)");
       println("Still, I make no promisses, that the program works correctly");
-      println("Caution. Rounding errors are possible");
       println(
         "Caution again. Follow the instructions closely, since, e.g. incorrect input may crash the program\n"
       );
