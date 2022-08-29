@@ -1,4 +1,4 @@
-object Task1 {
+object Task2 {
   def main(args: Array[String]): Unit = {
 
     val daysInMonthRegularYear: Array[Int] =
@@ -27,9 +27,9 @@ object Task1 {
     }
 
     def getSum(someNums: Array[Int]): Int = {
-      var sum: Int = 0
+      var sum: Int = 0;
       someNums.foreach { n => sum += n }
-      sum
+      sum;
     }
 
     def getDaysInYear(day: Int, month: Int, year: Int): Int = {
@@ -68,14 +68,14 @@ object Task1 {
       day = scala.io.StdIn.readInt();
       println(
         s"\n${year}-${month}-${day} (yyyy-mm-dd) is ${getDaysInYear(day, month, year)} day"
-      )
+      );
     }
 
     println("-" * 30);
     println("Task 2\n");
     printProgramDescription();
     handleUserInputAndAnswer();
-    println("\nThat's all. Goodbye!")
+    println("\nThat's all. Goodbye!");
     println("-" * 30);
   }
 }
