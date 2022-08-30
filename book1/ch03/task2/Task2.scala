@@ -18,12 +18,9 @@ object Task2 {
         year: Int,
         regularYear: Array[Int] = daysInMonthRegularYear,
         leapYear: Array[Int] = daysInMonthLeapYear
-    ): Array[Int] = {
-      if (isLeapYear(year)) {
-        leapYear;
-      } else {
-        regularYear;
-      }
+    ): Array[Int] = year match {
+      case year if (isLeapYear(year)) => leapYear
+      case _                          => regularYear
     }
 
     def getSum(someNums: Array[Int]): Int = {
@@ -63,9 +60,8 @@ object Task2 {
     def handleUserInputAndAnswer(): Unit = {
       var year, month, day: Int = 0;
       var daysInThisMonthInThisYear: Array[Int] = Array(0);
-      println(
-        "Enter the year (integer 1-10000):"
-      );
+
+      println("Enter year (integer 1-10000):");
       year = scala.io.StdIn.readInt();
       throwErrorIfNumNotInRange(year, 1, 10000);
       println("Enter month (integer, 1-12):");
