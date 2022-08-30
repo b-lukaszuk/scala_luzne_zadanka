@@ -32,15 +32,21 @@ object Task2 {
       sum;
     }
 
-    def getDaysInYear(day: Int, month: Int, year: Int): Int = {
-      val daysInMonth: Array[Int] = getNoOfDaysInMonthsInYear(year);
-      if (day > daysInMonth(month)) {
+    def throwErrorIfNumNotInRange(
+        num: Int,
+        minIncl: Int,
+        maxIncl: Int
+    ): Unit = {
+      if (num < minIncl || num > maxIncl) {
         throw new Exception(
-          s"month number ${month} got only ${daysInMonth(month)} days"
+          s"the received number ${num} must be between ${minIncl} (inclusive) and ${maxIncl} (inclusive)"
         );
-      } else {
-        getSum(daysInMonth.take(month)) + day;
       }
+    }
+
+    def getDaysInYear(day: Int, month: Int, year: Int): Int = {
+      val daysInMonth = getNoOfDaysInMonthsInYear(year);
+      getSum(daysInMonth.take(month)) + day;
     }
 
     def printProgramDescription(): Unit = {
@@ -56,16 +62,19 @@ object Task2 {
 
     def handleUserInputAndAnswer(): Unit = {
       var year, month, day: Int = 0;
+      var daysInThisMonthInThisYear: Array[Int] = Array(0);
       println(
-        "Enter the year (integer 0-10000):"
+        "Enter the year (integer 1-10000):"
       );
       year = scala.io.StdIn.readInt();
-      println(
-        "Enter month (integer, 1-12):"
-      );
+      throwErrorIfNumNotInRange(year, 1, 10000);
+      println("Enter month (integer, 1-12):");
       month = scala.io.StdIn.readInt();
+      throwErrorIfNumNotInRange(month, 1, 12);
       println("Enter day (integer, 1-31):");
       day = scala.io.StdIn.readInt();
+      daysInThisMonthInThisYear = getNoOfDaysInMonthsInYear(year);
+      throwErrorIfNumNotInRange(day, 1, daysInThisMonthInThisYear(month));
       println(
         s"\n${year}-${month}-${day} (yyyy-mm-dd) is ${getDaysInYear(day, month, year)} day"
       );
