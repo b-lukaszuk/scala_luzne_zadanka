@@ -1,6 +1,6 @@
 object Task1 {
   // nth should be >= 0
-  def fibonnaci(nth: Int): Int = {
+  private def fibonnaci(nth: Int): Int = {
     // nth should be >= 0
     // https://en.wikipedia.org/wiki/Fibonacci_number#Definition
     @annotation.tailrec
