@@ -12,7 +12,7 @@ object Task1 {
       }
     }
 
-    // protection agains nth < 0 (returns input instead of error)
+    // protection against nth < 0 (returns input it received instead of error)
     if (nth < 0) {
       nth
     } else {
