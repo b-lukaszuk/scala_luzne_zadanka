@@ -10,7 +10,7 @@
 
 # Task 1
 
-Exercise 1 in the chapter 2 of the book.
+Exercise 1 (optional) in the chapter 2 of the book.
 
 [Go to: Table of contents](#table-of-contents)
 
