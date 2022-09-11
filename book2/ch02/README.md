@@ -7,6 +7,7 @@
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
+6. [Task 6](#task-6)
 
 ---
 
@@ -82,4 +83,18 @@ Implement `uncurry`, which reverses the transformation of curry. Note that since
 
 <pre>
 def uncurry[A,B,C](f: A => B => C): (A, B) => C
+</pre>
+
+# Task 6
+
+Exercise 6 in the chapter 2 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Implement the higher-order function that composes two functions.
+
+<pre>
+def compose[A,B,C](f: B => C, g: A => B): A => C
 </pre>
