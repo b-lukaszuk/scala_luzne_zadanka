@@ -5,6 +5,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -52,4 +53,18 @@ This function, partial1, takes a value and a function of two arguments, and retu
 
 <pre>
 def partial1[A,B,C](a: A, f: (A,B) => C): B => C
+</pre>
+
+# Task 4
+
+Exercise 4 (hard) in the chapter 2 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Let's look at another example, currying, which converts a function of N arguments into a function of one argument that returns another function as its result.11 Here again, there is only one implementation that typechecks.
+
+<pre>
+def curry[A,B,C](f: (A, B) => C): A => (B => C)
 </pre>
