@@ -4,6 +4,7 @@
 
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 
 ---
 
@@ -29,8 +30,26 @@ Exercise 2 in the chapter 2 of the book.
 
 [Go to: Table of contents](#table-of-contents)
 
-EXERCISE 2: Implement isSorted, which checks whether an Array[A] is sorted according to a given comparison function.
+## Description
+
+Implement isSorted, which checks whether an Array[A] is sorted according to a given comparison function.
 
 <pre>
 def isSorted[A](as: Array[A], gt: (A,A) => Boolean): Boolean
+</pre>
+
+# Task 3
+
+Exercise 3 (hard) in the chapter 2 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Implement partial1 and write down a concrete usage of it. There is only one possible implementation that compiles. 
+
+This function, partial1, takes a value and a function of two arguments, and returns a function of one argument as its result. 
+
+<pre>
+def partial1[A,B,C](a: A, f: (A,B) => C): B => C
 </pre>
