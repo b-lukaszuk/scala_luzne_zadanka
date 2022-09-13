@@ -12,6 +12,8 @@
 
 # Background Info
 
+[Go to: Table of contents](#table-of-contents)
+
 The exercises are to be solved based on a program in Listing 3.1.
 
 # Task 1
