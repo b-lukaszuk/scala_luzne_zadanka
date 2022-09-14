@@ -7,6 +7,8 @@
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
+5. [Task 5](#task-5)
+6. [Task 6](#task-6)
 
 ---
 
@@ -76,4 +78,28 @@ Implement `dropWhile`, which removes elements from the `List` prefix as long as 
 
 <pre>
 def dropWhile[A](l: List[A])(f: A => Boolean): List[A]
+</pre>
+
+# Task 5
+
+Exercise 5 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Using the same idea, implement the function setHead for replacing the first element of a List with a different value.
+
+# Task 6
+
+Exercise 6 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Not everything works out so nicely. Implement a function, `init`, which returns a `List` consisting of all but the last element of a `List`. So, given `List(1,2,3,4)`, `init` will return `List(1,2,3)`. Why can't this function be implemented in constant time like `tail`?
+
+<pre>
+def init[A](l: List[A]): List[A]
 </pre>
