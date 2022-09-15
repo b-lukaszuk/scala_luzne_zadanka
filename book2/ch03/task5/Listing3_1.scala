@@ -43,6 +43,6 @@ object List {
     println(s"Result: ${setHeadExample2}\n")
 
     println("setHead(Nil, 7)")
-    println(s"Result: ${setHeadExample3}")
+    println(s"Result: ${setHeadExample3}\n")
   }
 }
