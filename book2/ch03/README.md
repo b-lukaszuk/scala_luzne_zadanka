@@ -9,6 +9,11 @@
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
+7. [Task 7](#task-7)
+8. [Task 8](#task-8)
+9. [Task 9](#task-9)
+10. [Task 10](#task-10)
+11. [Task 11](#task-11)
 
 ---
 
@@ -103,3 +108,57 @@ Not everything works out so nicely. Implement a function, `init`, which returns 
 <pre>
 def init[A](l: List[A]): List[A]
 </pre>
+
+# Task 7
+
+Exercise 7 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+Skipped (but I think its not possible, at least I don't know how to early stop foldRight)
+
+# Task 8
+
+Exercise 8 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+Skipped (but I checked)
+
+# Task 9
+
+Exercise 9 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Compute the `length` of a list using `foldRight`.
+
+<pre>
+def length[A](l: List[A]): Int
+</pre>
+
+# Task 10
+
+Exercise 10 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+[...] then write another general list-recursion function, `foldLeft` that is tail-recursive, using the techniques we discussed in the previous chapter.
+
+<pre>
+def foldLeft[A,B](l: List[A], z: B)(f: (B, A) => B): B
+</pre>
+
+# Task 11
+
+Exercise 11 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write `sum`, `product`, and a function to compute the `length` of a list using `foldLeft`.
