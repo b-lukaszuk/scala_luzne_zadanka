@@ -20,7 +20,7 @@ object List {
 
   def setHead[A](l: List[A], elt: A): List[A] = l match {
     case Nil => Nil
-    case Cons(x, xs) => Cons(elt, xs)
+    case Cons(_, xs) => Cons(elt, xs)
   }
 
   def apply[A](as: A*): List[A] =
