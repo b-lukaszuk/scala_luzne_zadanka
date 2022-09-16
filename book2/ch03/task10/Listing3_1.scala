@@ -35,17 +35,24 @@ object List {
   val total = sum(example)
 
   def printfoldLeftExamples(): Unit = {
-    val foldLeftExample: Float = foldLeft(Cons(2, Cons(5, Cons(1, Nil))), 100)((acc, b) => acc / b)
+
+    // checking the order of execution of foldLeft
+    println("foldLeft(Cons(2, Cons(5, Cons(1, Nil))), 100)\n((acc, b) => {println(s\"${acc}/${b}\"); acc / b })")
+    println("printing folding trace:")
+    val foldLeftExample: Float = foldLeft(Cons(2, Cons(5, Cons(1, Nil))), 100)((acc, b) => {println(s"${acc}/${b}"); acc / b })
+    println(s"Result: ${foldLeftExample}\n")
+
     val foldLeftExample2: Float = foldLeft(Cons(3, Cons(2, Nil)), 66)((acc, b) => acc / b)
     val foldLeftExample3: Float = foldLeft(Cons(3, Nil), 27)((acc, b) => acc / b)
-
-    println("foldLeft(Cons(2, Cons(5, Cons(1, Nil))), 100)((acc, b) => acc / b)")
-    println(s"Result: ${foldLeftExample}\n")
+    val foldLeftExample4: Float = foldLeft(Nil:List[Int], 27)((acc, b) => acc / b)
 
     println("foldLeft(Cons(3, Cons(2, Nil)), 66)((acc, b) => acc / b)")
     println(s"Result: ${foldLeftExample2}\n")
 
     println("foldLeft(Cons(3, Nil), 27)((acc, b) => acc / b)")
     println(s"Result: ${foldLeftExample3}\n")
+
+    println("foldLeft(Nil:List[Int], 27)((acc, b) => acc / b)")
+    println(s"Result: ${foldLeftExample4}\n")
   }
 }
