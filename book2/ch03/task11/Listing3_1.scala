@@ -36,10 +36,10 @@ object List {
   val total = sum(example)
 
   def printfoldLeftExamples(): Unit = {
-    val foldLeftExample: Float = sum(Cons(1, Cons(2, Cons(3, Nil:List[Int]))))
-    val foldLeftExample2: Float = product(Cons(2, Cons(2, Cons(3, Nil:List[Int]))))
-    val foldLeftExample3: Float = length(Cons(2, Cons(2, Cons(3, Nil:List[Int]))))
-    val foldLeftExample4: Float = length(Nil)
+    val foldLeftExample: Int = sum(Cons(1, Cons(2, Cons(3, Nil:List[Int]))))
+    val foldLeftExample2: Int = product(Cons(2, Cons(2, Cons(3, Nil:List[Int]))))
+    val foldLeftExample3: Int = length(Cons(2, Cons(2, Cons(3, Nil:List[Int]))))
+    val foldLeftExample4: Int = length(Nil)
 
 
     println("sum(Cons(1, Cons(2, Cons(3, Nil:List[Int]))))")
