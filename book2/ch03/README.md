@@ -14,10 +14,11 @@
 9. [Task 9](#task-9)
 10. [Task 10](#task-10)
 11. [Task 11](#task-11)
-12. [Task 12 to 17](#task-12-to-17)
+12. [Tasks 12 to 17](#tasks-12-to-17)
 13. [Task 18](#task-18)
 14. [Task 19](#task-19)
-15. [Task 20 to 22](#task-20-to-22)
+15. [Tasks 20 to 22](#tasks-20-to-22)
+16. [Task 23](#task-23)
 
 ---
 
@@ -167,7 +168,7 @@ Exercise 11 in the chapter 3 of the book.
 
 Write `sum`, `product`, and a function to compute the `length` of a list using `foldLeft`.
 
-# Task 12 to 17
+# Tasks 12 to 17
 
 Exercise 12 to 17 in the chapter 3 of the book.
 
