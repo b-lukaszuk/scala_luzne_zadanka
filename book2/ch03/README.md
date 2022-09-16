@@ -14,6 +14,10 @@
 9. [Task 9](#task-9)
 10. [Task 10](#task-10)
 11. [Task 11](#task-11)
+12. [Task 12 to 17](#task-12-to-17)
+13. [Task 18](#task-18)
+14. [Task 19](#task-19)
+15. [Task 20 to 22](#task-20-to-22)
 
 ---
 
@@ -162,3 +166,55 @@ Exercise 11 in the chapter 3 of the book.
 ## Description
 
 Write `sum`, `product`, and a function to compute the `length` of a list using `foldLeft`.
+
+# Task 12 to 17
+
+Exercise 12 to 17 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+Skipped (enough of folds)
+
+# Task 18
+
+Exercise 18 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `map`, that generalizes modifying each element in a list while maintaining the structure of the list.
+
+<pre>
+def map[A,B](l: List[A])(f: A => B): List[B]
+</pre>
+
+# Task 19
+
+Exercise 19 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `filter` that removes elements from a list unless they satisfy a given predicate. Use it to remote all odd numbers from a `List[Int]`.
+
+# Tasks 20 to 22
+
+Exercise 20 to 22 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+Skipped.
+
+# Task 23
+
+Exercise 23 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Generalize a function from Task 22, i.e.
+
+Write a function that accepts two lists and constructs a new list by adding corresponding elements. For example, `List(1,2,3)` and `List(4,5,6)` becomes `List(5,7,9)`.
