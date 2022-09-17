@@ -20,28 +20,28 @@ object List {
   val example2 = List(1, 2, 3)
 
   def printMapExamples(): Unit = {
-    val MapExample: List[Int] =
+    val mapExample: List[Int] =
       map(Cons(1, Cons(2, Cons(3, Nil: List[Int]))))(x => x * 2)
-    val MapExample2: List[Double] =
+    val mapExample2: List[Double] =
       map(Cons(2.2, Cons(3.4, Nil: List[Double])))((x: Double) => x / 2)
-    val MapExample3: List[String] =
+    val mapExample3: List[String] =
       map(Cons('a', Cons('b', Cons('c', Nil: List[Char]))))(x => s"zz${x}")
-    val MapExample4: List[Int] = map(Nil: List[Int])(_ + 2)
+    val mapExample4: List[Int] = map(Nil: List[Int])(_ + 2)
 
     println("map(Cons(1, Cons(2, Cons(3, Nil:List[Int]))))(x => x*2)")
-    println(s"Result: ${MapExample}\n")
+    println(s"Result: ${mapExample}\n")
 
     println(
       "map(Cons(2.2, Cons(3.4, Nil: List[Double])))((x: Double) => x / 2)"
     )
-    println(s"Result: ${MapExample2}\n")
+    println(s"Result: ${mapExample2}\n")
 
     println(
       "map(Cons('a', Cons('b', Cons('c', Nil: List[Char]))))(x => s\"zz${x}\")"
     )
-    println(s"Result: ${MapExample3}\n")
+    println(s"Result: ${mapExample3}\n")
 
     println("map(Nil: List[Int])(_ + 2)")
-    println(s"Result: ${MapExample4}\n")
+    println(s"Result: ${mapExample4}\n")
   }
 }
