@@ -7,12 +7,6 @@ case class Cons[+A](head: A, tail: List[A]) extends List[A]
 
 object List {
 
-  def filter[A](l: List[A])(fn: A => Boolean): List[A] = l match {
-    case Nil                    => Nil
-    case Cons(x, xs) if (fn(x)) => Cons(x, filter(xs)(fn))
-    case Cons(_, xs)            => filter(xs)(fn)
-  }
-
   // name inspired by Haskell
   def zipWith[A, B, C](l1: List[A], l2: List[B])(fn: (A, B) => C): List[C] =
     (l1, l2) match {
