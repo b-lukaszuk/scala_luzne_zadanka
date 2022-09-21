@@ -270,4 +270,4 @@ Exercise 29 in the chapter 3 of the book.
 
 ## Description
 
-Generalize `size`, `maximum`, `depth`, and `map`, writing a new function fold that abstracts over their similarities.
+Generalize `size`, `maximum`, `depth`, and `map`, writing a new function `fold` that abstracts over their similarities.
