@@ -32,6 +32,7 @@
 [Go to: Table of contents](#table-of-contents)
 
 The exercises (Task 1-23) are to be solved based on a program in Listing 3.1.
+
 The exercises (Task 25-29) are to be solved based on a program in the catalog ./tree
 
 # Task 1
