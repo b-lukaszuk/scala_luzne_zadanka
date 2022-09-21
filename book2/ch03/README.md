@@ -18,7 +18,12 @@
 13. [Task 18](#task-18)
 14. [Task 19](#task-19)
 15. [Tasks 20 to 22](#tasks-20-to-22)
-16. [Task 23](#task-23)
+16. [Task 23 to 24](#tasks-23-to-24)
+17. [Task 25](#task-25)
+18. [Task 26](#task-26)
+19. [Task 27](#task-27)
+20. [Task 28](#task-28)
+21. [Task 29](#task-29)
 
 ---
 
@@ -26,7 +31,8 @@
 
 [Go to: Table of contents](#table-of-contents)
 
-The exercises are to be solved based on a program in Listing 3.1.
+The exercises (Task 1-23) are to be solved based on a program in Listing 3.1.
+The exercises (Task 25-29) are to be solved based on a program in the catalog ./tree
 
 # Task 1
 
@@ -219,3 +225,49 @@ Exercise 23 in the chapter 3 of the book.
 Generalize a function from Task 22, i.e.
 
 Write a function that accepts two lists and constructs a new list by adding corresponding elements. For example, `List(1,2,3)` and `List(4,5,6)` becomes `List(5,7,9)`.
+
+# Tasks 24 to 25
+
+Exercise 24 and 25 in the chapter 3 of the book were skipped.
+
+[Go to: Table of contents](#table-of-contents)
+
+# Task 26
+
+Exercise 26 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `maximum ` that returns the maximum element in a `Tree[Int]`.
+
+# Task 27
+
+Exercise 27 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `depth` that returns the maximum path length from the root of a tree to any leaf.
+
+# Task 28
+
+Exercise 28 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `map`, analogous to the method of the same name on `List`, that modifies each element in a tree with a given function.
+
+# Task 29
+
+Exercise 29 in the chapter 3 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Generalize `size`, `maximum`, `depth`, and `map`, writing a new function fold that abstracts over their similarities.
