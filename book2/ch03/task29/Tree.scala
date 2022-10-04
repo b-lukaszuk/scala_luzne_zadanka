@@ -39,14 +39,27 @@ object Tree {
         accFn(fold(left)(fn)(accFn), fold(right)(fn)(accFn))
     }
 
-  // val example: Tree[Int] = map(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))(_ * 2)
-  // val example2: Tree[Float] =
-  //   map(Branch(Leaf(13), Branch(Leaf(2), Leaf(5))))(_.toFloat / 2)
-  // val example3: Tree[Int] = map(
-  //   Branch(Leaf('a'), Branch(Leaf('b'), Branch(Leaf('c'), Leaf('d'))))
-  // )(_.toInt)
+  // size counts number of nodes (Branch or Leaf) in a tree
+  def size[A](tree: Tree[A]): Int = {
+    fold(tree)(_ => 1)(_ + _ + 1)
+  }
 
-  def printFoldExamples(): Unit = {
-    println("printFoldExamples")
+  val example: Int = size(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))
+  val example2: Int = size(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))))
+  val example3: Int = size(
+    Branch(Branch(Leaf('a'), Leaf('a')), Branch(Leaf('b'), Leaf('c')))
+  )
+
+  def printSizeExamples(): Unit = {
+    println("size(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))")
+    println(s"Result = ${example}")
+
+    println("size(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))))")
+    println(s"Result = ${example2}")
+
+    println(
+      "size(Branch(Branch(Leaf('a'), Leaf('a')), Branch(Leaf('b'), Leaf('c'))))"
+    )
+    println(s"Result = ${example3}")
   }
 }
