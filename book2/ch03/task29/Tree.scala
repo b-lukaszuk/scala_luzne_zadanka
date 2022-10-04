@@ -63,4 +63,27 @@ object Tree {
     println(s"Result = ${example3}")
   }
 
+  def maximum(tree: Tree[Int]): Int = {
+    fold(tree)((a: Int) => a)((a: Int, b: Int) => a.max(b))
+  }
+
+  def maximum(tree: Tree[Double]): Double = {
+    fold(tree)((a: Double) => a)((a: Double, b: Double) => a.max(b))
+  }
+
+  def printMaximumExamples(): Unit = {
+
+    val example: Int = maximum(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))
+    println("maximum(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))")
+    println(s"Result = ${example}")
+
+    val example2: Double = maximum(
+      Branch(Branch(Leaf(11.2), Leaf(8.3)), Branch(Leaf(3.3), Leaf(4.3)))
+    )
+    println(
+      "maximum(Branch(Branch(Leaf(11.2), Leaf(8.3)), Branch(Leaf(3.3), Leaf(4.3))))"
+    )
+    println(s"Result = ${example2}")
+  }
+
 }
