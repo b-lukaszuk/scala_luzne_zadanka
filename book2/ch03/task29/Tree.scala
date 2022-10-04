@@ -44,22 +44,23 @@ object Tree {
     fold(tree)(_ => 1)(_ + _ + 1)
   }
 
-  val example: Int = size(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))
-  val example2: Int = size(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))))
-  val example3: Int = size(
-    Branch(Branch(Leaf('a'), Leaf('a')), Branch(Leaf('b'), Leaf('c')))
-  )
-
   def printSizeExamples(): Unit = {
+
+    val example: Int = size(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))
     println("size(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))")
     println(s"Result = ${example}")
 
+    val example2: Int = size(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))))
     println("size(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))))")
     println(s"Result = ${example2}")
 
+    val example3: Int = size(
+      Branch(Branch(Leaf('a'), Leaf('a')), Branch(Leaf('b'), Leaf('c')))
+    )
     println(
       "size(Branch(Branch(Leaf('a'), Leaf('a')), Branch(Leaf('b'), Leaf('c'))))"
     )
     println(s"Result = ${example3}")
   }
+
 }
