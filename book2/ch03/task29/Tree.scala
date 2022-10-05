@@ -107,4 +107,27 @@ object Tree {
     println(s"Result = ${example2}")
   }
 
+  def map[A, B](tree: Tree[A])(fn: A => B): Tree[B] = {
+    fold(tree)((x: A) => Leaf(fn(x)): Tree[B])((left, right) =>
+      Branch(left, right)
+    )
+  }
+
+  def printMapExamples(): Unit = {
+    val example: Tree[Int] =
+      map(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))(_ * 2)
+    println("map(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))(_*2)")
+    println(s"Result = ${example}")
+
+    val example2: Tree[Int] = map(
+      Branch(
+        Branch(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))), Leaf('d')),
+        Leaf('e')
+      )
+    )(_ => 1)
+    println(
+      "map(Branch(Branch(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))), Leaf('d')), Leaf('e')))(_ => 1)"
+    )
+    println(s"Result = ${example2}")
+  }
 }

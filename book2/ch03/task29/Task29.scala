@@ -9,6 +9,8 @@ object Task29 {
     Tree.printMaximumExamples()
     println("\nDepth:")
     Tree.printDepthExamples()
+    println("\nMap:")
+    Tree.printMapExamples()
     println("\nThat's all. Goodbye!\n")
   }
 }
