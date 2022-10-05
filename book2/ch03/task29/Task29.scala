@@ -7,6 +7,8 @@ object Task29 {
     Tree.printSizeExamples()
     println("\nMaximum:")
     Tree.printMaximumExamples()
+    println("\nDepth:")
+    Tree.printDepthExamples()
     println("\nThat's all. Goodbye!\n")
   }
 }

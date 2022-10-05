@@ -86,4 +86,25 @@ object Tree {
     println(s"Result = ${example2}")
   }
 
+  def depth[A](tree: Tree[A]): Int = {
+    fold(tree)(_ => 0)((left, right) => 1 + left.max(right))
+  }
+
+  def printDepthExamples(): Unit = {
+    val example: Int = depth(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))
+    println("depth(Branch(Leaf(3), Branch(Leaf(2), Leaf(5))))")
+    println(s"Result = ${example}")
+
+    val example2: Int = depth(
+      Branch(
+        Branch(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))), Leaf('d')),
+        Leaf('e')
+      )
+    )
+    println(
+      "depth(Branch(Branch(Branch(Leaf('a'), Branch(Leaf('b'), Leaf('c'))), Leaf('d')), Leaf('e')))"
+    )
+    println(s"Result = ${example2}")
+  }
+
 }
