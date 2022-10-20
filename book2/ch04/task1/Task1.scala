@@ -7,7 +7,10 @@ object Task1 {
     Option.printMapExamples()
 
     println("\nOption.flatMap examples:")
-    Option.printflatMapExamples()
+    Option.printFlatMapExamples()
+
+    println("\nOption.getOrElse examples:")
+    Option.printGetOrElseExamples()
 
     println("\nThat's all. Goodbye!\n")
   }
