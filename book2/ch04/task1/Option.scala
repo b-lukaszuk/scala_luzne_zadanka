@@ -5,7 +5,6 @@ case class Some[+A](get: A) extends Option[A]
 case object None extends Option[Nothing]
 
 object Option {
-  def printHello() = println("Hello from Option")
 
   def map[A, B](option: Option[A])(f: A => B): Option[B] = option match {
     case None    => None
@@ -37,7 +36,7 @@ object Option {
   // explanation of 'default: => B'
   // https://users.scala-lang.org/t/what-does-x-int-mean-in-scala/5558
   def getOrElse[A, B >: A](option: Option[A])(default: => B): B = option match {
-    case None => default
+    case None    => default
     case Some(a) => a
   }
 
@@ -46,7 +45,20 @@ object Option {
     val example2: Int = getOrElse(None)(5)
     println(s"getOrElse(Some(3))(4) = ${example}")
     println(s"getOrElse(None)(5) = ${example2}")
+  }
 
+  def filter[A](option: Option[A])(f: A => Boolean): Option[A] = option match {
+    case None    => None
+    case Some(a) => if (f(a)) Some(a) else None
+  }
+
+  def printFilterExamples(): Unit = {
+    val example: Option[Int] = filter(Some(5))((x: Int) => x < 4)
+    val example2: Option[Int] = filter(Some(3))((x: Int) => x < 4)
+    val example3: Option[Int] = filter(None)((x: Int) => x < 4)
+    println(s"filter(Some(5))((x: Int) => x < 4) = ${example}")
+    println(s"filter(Some(3))((x: Int) => x < 4) = ${example2}")
+    println(s"filter(None)((x: Int) => x < 4) = ${example3}")
   }
 
 }

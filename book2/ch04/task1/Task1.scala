@@ -12,6 +12,9 @@ object Task1 {
     println("\nOption.getOrElse examples:")
     Option.printGetOrElseExamples()
 
+    println("\nOption.filter examples:")
+    Option.printFilterExamples()
+
     println("\nThat's all. Goodbye!\n")
   }
 }
