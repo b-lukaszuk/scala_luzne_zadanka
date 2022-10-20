@@ -43,3 +43,7 @@ def filter(f: A => Boolean): Option[A]
 - For `map` and `flatMap`, the type signature should be sufficient to determine the implementation.
 - `getOrElse` returns the result inside the `Some` case of the `Option`, or if the `Option` is `None`, returns the given default value.
 - `orElse` returns the first `Option` if it is defined, otherwise, returns the second `Option`.
+
+# My Notes
+
+Not sure where I should create, e.g. `map` method. Not sure how to do this inside `sealed trait Option` so I will create a companion object (i.e. `object Option`) and place the required methods there. But I'm affraid that the methods' signatures will slightly differ from the ones presented above.
