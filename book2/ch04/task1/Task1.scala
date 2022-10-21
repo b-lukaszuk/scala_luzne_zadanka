@@ -6,11 +6,11 @@ object Task1 {
     println("\nOption.map examples:")
     Option.printMapExamples()
 
-    println("\nOption.flatMap examples:")
-    Option.printFlatMapExamples()
-
     println("\nOption.getOrElse examples:")
     Option.printGetOrElseExamples()
+
+    println("\nOption.flatMap examples:")
+    Option.printFlatMapExamples()
 
     println("\nOption.filter examples:")
     Option.printFilterExamples()
