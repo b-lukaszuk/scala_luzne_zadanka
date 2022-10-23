@@ -4,6 +4,7 @@
 
 0. [Background Info](#background-info)
 1. [Task 1](#task-1)
+2. [Task 2](#task-2)
 
 ---
 
@@ -47,3 +48,27 @@ def filter(f: A => Boolean): Option[A]
 # My Notes
 
 Not sure where I should create, e.g. `map` method. Not sure how to do this inside `sealed trait Option` so I will create a companion object (i.e. `object Option`) and place the required methods there. But I'm affraid that the methods' signatures will slightly differ from the ones presented above.
+
+# Task 2
+
+Exercise 2 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Implement the `variance` function [...] in terms of `mean` and `flatMap`.
+
+The `mean` function:
+
+<pre>
+def mean(xs: Seq[Double]): Option[Double] =
+	if (xs.isEmpty) None
+	else Some(xs.sum / xs.length)
+</pre>
+
+The `variance` signature:
+
+<pre>
+def variance(xs: Seq[Double]): Option[Double]
+</pre>
