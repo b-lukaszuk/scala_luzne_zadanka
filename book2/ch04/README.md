@@ -72,3 +72,8 @@ The `variance` signature:
 <pre>
 def variance(xs: Seq[Double]): Option[Double]
 </pre>
+
+## My notes
+
+Population variance is `sum / n`, sample variance is `sum / (n - 1)`.
+Here, I will go with the first option like in the task description (as suggested in the book).

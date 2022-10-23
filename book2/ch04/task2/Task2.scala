@@ -12,10 +12,11 @@ object Task2 {
       val deviations: Seq[Option[Double]] = xs.map(x =>
         average.flatMap((avg: Double) => Some(math.pow(x - avg, 2)))
       )
-      Some(
+      // population variance is sum / n, sample variance is sum / (n - 1)
+      // here I will go with the first option like in the task description
+      mean(
         deviations
           .map((deviation: Option[Double]) => deviation.getOrElse(0: Double))
-          .sum
       )
     }
   }
