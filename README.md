@@ -20,6 +20,10 @@ Use:
 - scalac: type in bash `scalac [file_name.scala]`, scala compiler
 - sbt: will use it for quite some stuff (better scalac?), more info probably [here](https://www.scala-sbt.org/)
 
+## Scala version
+
+2.11.12
+
 ## Metals
 
 Additional install:
