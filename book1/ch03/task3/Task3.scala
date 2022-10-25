@@ -1,43 +1,42 @@
 object Task3 {
   def main(args: Array[String]): Unit = {
-
-    def putIntTo0and255range(
-        number: Int,
-        minIncl: Int = 0,
-        maxIncl: Int = 255
+    def putNumToRange(
+        number: Float,
+        rangeMinIncl: Int = 0,
+        rangeMaxIncl: Int = 255
     ): Int = number match {
-      case number if (number < minIncl) => minIncl
-      case number if (number > maxIncl) => maxIncl
-      case _                            => number
+      case number if (number < rangeMinIncl) => rangeMinIncl
+      case number if (number > rangeMaxIncl) => rangeMaxIncl
+      case _                                 => Math.round(number)
     }
 
     def printProgramDescription(): Unit = {
-      println(
-        "Hello. The program will ask you for the four digits (integers in range 0-255)"
-      );
-      println("The digits represent colors in computer ARGB format");
-      println(
-        "Then it will return a single digit in range 0-255 (kind of summary of the four digits given by you)"
-      );
-      println(
-        "Be careful to provide correct input otherwise the program may crash"
-      );
-      println(
-        "Remember there is no guarantee that the program works correctly (although I hope it should)\n"
-      );
+      println("Hello. This is a toy program.");
+      println("The program asks user to enter four digits.")
+      println("The digits represent colors in computer ARGB format.");
+      println("Each digit is an integer in range 0-255 (incl-incl).")
+      println("Next, the program will display ARGB32 value.")
+      println("Try to provide correct input otherwise the program may crash.");
+      println("NO GUARANTEE OF ITS ACCURACY. Still, I hope it'll work fine.")
+      println("All clear. Then let's begin.")
     }
 
-    def handleUserInput(cannalName: String): Int = {
+    def getUserInputForCanal(cannalName: String): Int = {
       var colorValue: Int = 0;
-      println(
-        s"Enter value [integer 0-255 (inclusive-inclusive)] for cannal ${cannalName}:"
-      );
-      println(
-        "If outside the range a value will be placed within the given boundary (0-255)"
-      )
-      colorValue = putIntTo0and255range(scala.io.StdIn.readInt());
-      println(s"Value read: ${colorValue}");
-      putIntTo0and255range(colorValue);
+      var numberAcquired: Boolean = false;
+      while (!numberAcquired) {
+        try {
+          println(s"\nEnter value [integer 0-255] for cannal ${cannalName}:");
+          println("Incorrect numbers are rounded to the closest correct value")
+          colorValue = putNumToRange(scala.io.StdIn.readFloat());
+          println(s"Value read: ${colorValue}");
+          numberAcquired = true;
+        } catch {
+          case e: NumberFormatException =>
+            println("That was not a number. Try again.")
+        }
+      }
+      colorValue
     }
 
     def IntToHex(number: Int): String = {
@@ -46,12 +45,12 @@ object Task3 {
     }
 
     def handleUserInputAndAnswer(): Unit = {
-      var cannalsNames: Array[String] = Array("A", "R", "G", "B");
-      var result: String = "";
-      cannalsNames.foreach((cannalName) =>
-        result += IntToHex(handleUserInput(cannalName))
+      var cannals: Array[String] = Array("A", "R", "G", "B");
+      var argb32hex: String = "";
+      cannals.foreach((cannal) =>
+        argb32hex += IntToHex(getUserInputForCanal(cannal))
       )
-      println(s"The color in hex is: ${result}");
+      println(s"\nThe color ARGB32 (hex): ${argb32hex}");
     }
 
     println("-" * 30);
