@@ -1,3 +1,11 @@
+import scala.collection.immutable.HashMap
+
+object ActivityLevel extends Enumeration {
+  type ActivityLevel = Value
+  val Sedentary, LightlyActive, ModeratelyActive, VeryActive, ExtraActive =
+    Value
+}
+
 object Task4 {
   def getBmrKcal(
       weightKg: Double,
