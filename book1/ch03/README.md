@@ -27,9 +27,13 @@ Write a script that accepts the month, day, and year of a date and outputs the n
 
 [Go to: Table of contents](#table-of-contents)
 
-It is customary to express colors on a computer as a combination of red, green, and blue along with another value called alpha that indicates transparency. A single Int has 32 bits or 4 bytes. The four different color values are often packed into a single Int as an ARGB value. The highest byte is the alpha and below that you have red, green, and blue in order. Each byte can store values between 0 and 255. For alpha, 0 is completely transparent and 255 is completely opaque.
+It is customary to express colors on a computer as a combination of red, green, and blue along with another value called alpha that indicates transparency. See: [ARGB32](https://en.wikipedia.org/wiki/RGBA_color_model#ARGB32).
 
 Write code that reads four Int values for alpha, red, green, and blue and calculates an Int with the combined ARGB value. If one of the numbers passed in is outside the 0 to 255 range, use 0 or 255, whichever it is closer to. Note that bitwise operations are appropriate for this exercise. You might find hexadecimal representation of numbers to be useful as well.
+
+## My Notes
+
+The phrase `and calculates an Int with the combined ARGB value.` is not clear. Should the Int be in decimal, binary or what format. I think I will return hex of ARGB32 (like in the example on [the wiki page](https://en.wikipedia.org/wiki/RGBA_color_model#ARGB32)).
 
 # Task 4
 
