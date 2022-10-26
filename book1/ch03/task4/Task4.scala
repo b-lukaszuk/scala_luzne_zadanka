@@ -11,6 +11,24 @@ object Nutrients extends Enumeration {
   val Carbohydrates, Proteins, Fats = Value
 }
 
+class Person(
+    val weightKg: Double,
+    val heightCm: Double,
+    val ageYears: Double,
+    val sexFemale: Boolean,
+    val activityLevel: ActivityLevel.ActivityLevel,
+    val poundsPerWeekGainLoss: Double
+) {
+  import ActivityLevel.ActivityLevel
+  override def toString(): String = {
+    var description: String = s"Person\n\tWeight [kg]: ${weightKg}\n"
+    description += s"\tHeight [cm]: ${heightCm}\n\tAge [years]: ${ageYears}\n"
+    description += s"\tFemale: ${sexFemale}\n\tActivityLevel: ${activityLevel}\n"
+    description += s"\tGoal [pounds per week]: ${poundsPerWeekGainLoss}"
+    description
+  }
+}
+
 object Task4 {
   import ActivityLevel.ActivityLevel
   import Nutrients.Nutrients
@@ -77,6 +95,15 @@ object Task4 {
     println(getBMRKcalDay(67, 170, 30, true))
     println(BMRMultipliers.getOrElse(ActivityLevel.LightlyActive, 0))
     println(NutrientsPercentageOfKcal.getOrElse(Nutrients.Carbohydrates, 0))
+    val jerry: Person = new Person(
+      weightKg = 85,
+      heightCm = 182,
+      ageYears = 30,
+      sexFemale = false,
+      activityLevel = ActivityLevel.LightlyActive,
+      poundsPerWeekGainLoss = -2
+    )
+    println(jerry)
     println("-" * 30)
     println()
   }
