@@ -6,8 +6,14 @@ object ActivityLevel extends Enumeration {
     Value
 }
 
+object Nutrients extends Enumeration {
+  type Nutrients = Value
+  val Carbohydrates, Proteins, Fats = Value
+}
+
 object Task4 {
   import ActivityLevel.ActivityLevel
+  import Nutrients.Nutrients
 
   val BMRMultipliers: HashMap[ActivityLevel, Double] = HashMap(
     ActivityLevel.Sedentary -> 1.2,
@@ -16,6 +22,15 @@ object Task4 {
     ActivityLevel.VeryActive -> 1.725,
     ActivityLevel.ExtraActive -> 1.9
   )
+
+  // (Nutrient, (minKcalPercentage, maxKcalPercentage))
+  // percentage written as decimal
+  val NutrientsPercentageOfKcal: HashMap[Nutrients, (Double, Double)] =
+    HashMap(
+      Nutrients.Carbohydrates -> (0.45, 0.65),
+      Nutrients.Proteins -> (0.1, 0.3),
+      Nutrients.Fats -> (0.2, 0.35)
+    )
 
   // BMR - Basal Metabolic Rate
   def getBMRKcal(
@@ -42,8 +57,13 @@ object Task4 {
   }
 
   def main(args: Array[String]): Unit = {
+    println()
+    println("-" * 30)
     println(getBMRKcal(90, 180, 30, false))
     println(getBMRKcal(67, 170, 30, true))
     println(BMRMultipliers.getOrElse(ActivityLevel.LightlyActive, 0))
+    println(NutrientsPercentageOfKcal.getOrElse(Nutrients.Carbohydrates, 0))
+    println("-" * 30)
+    println()
   }
 }
