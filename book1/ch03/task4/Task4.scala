@@ -33,7 +33,7 @@ object Task4 {
     )
 
   // BMR - Basal Metabolic Rate
-  def getBMRKcal(
+  def getBMRKcalDay(
       weightKg: Double,
       heightCm: Double,
       ageYrs: Double,
@@ -45,22 +45,36 @@ object Task4 {
   }
 
   // TEE - Total Energy Expended
-  def getTEEKcal(
+  def getTEEKcalDay(
       weightKg: Double,
       heightCm: Double,
       ageYrs: Double,
       sexFemale: Boolean,
       activityLevel: ActivityLevel
   ): Double = {
-    val BMR: Double = getBMRKcal(weightKg, heightCm, ageYrs, sexFemale)
+    val BMR: Double = getBMRKcalDay(weightKg, heightCm, ageYrs, sexFemale)
     BMR * BMRMultipliers.getOrElse(activityLevel, 0: Double)
+  }
+
+  // poundsPerWeekGainLoss, e.g. +1, -2 (if gain/lose n ponds per week)
+  def getTEEKcalDayAdjustByGoal(
+      weightKg: Double,
+      heightCm: Double,
+      ageYrs: Double,
+      sexFemale: Boolean,
+      activityLevel: ActivityLevel,
+      poundsPerWeekGainLoss: Double = 1
+  ): Double = {
+    val TEEKcalDay: Double =
+      getTEEKcalDay(weightKg, heightCm, ageYrs, sexFemale, activityLevel)
+    TEEKcalDay - (poundsPerWeekGainLoss * 3500 / 7)
   }
 
   def main(args: Array[String]): Unit = {
     println()
     println("-" * 30)
-    println(getBMRKcal(90, 180, 30, false))
-    println(getBMRKcal(67, 170, 30, true))
+    println(getBMRKcalDay(90, 180, 30, false))
+    println(getBMRKcalDay(67, 170, 30, true))
     println(BMRMultipliers.getOrElse(ActivityLevel.LightlyActive, 0))
     println(NutrientsPercentageOfKcal.getOrElse(Nutrients.Carbohydrates, 0))
     println("-" * 30)
