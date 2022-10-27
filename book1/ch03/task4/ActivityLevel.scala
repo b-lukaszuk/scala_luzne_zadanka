@@ -20,6 +20,6 @@ object BMRMultipliers {
   )
 
   def getActivityMultiplier(activityLevel: ActivityLevel): Double = {
-    BMRMultipliers.getOrElse(activityLevel, 0: Double)
+    multipliers.getOrElse(activityLevel, 0: Double)
   }
 }
