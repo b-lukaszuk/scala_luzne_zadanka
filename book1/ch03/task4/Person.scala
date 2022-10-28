@@ -10,12 +10,19 @@ class Person(
     val activityLevel: ActivityLevel.ActivityLevel,
     val poundsPerWeekGainLoss: Double
 ) {
+  require(weightKg >= 30 && weightKg <= 600)
+  require(heightCm >= 140 && heightCm <= 272)
+  require(ageYears >= 18 && ageYears <= 123)
+  require(poundsPerWeekGainLoss >= -2 && poundsPerWeekGainLoss < 5)
 
   override def toString(): String = {
     var description: String = s"Person\n\tWeight [kg]: ${weightKg}\n"
     description += s"\tHeight [cm]: ${heightCm}\n\tAge [years]: ${ageYears}\n"
     description += s"\tFemale: ${sexFemale}\n\tActivityLevel: ${activityLevel}\n"
-    description += s"\tGoal [pounds per week]: ${poundsPerWeekGainLoss}"
+    description += s"\tGoal [pounds per week]: ${poundsPerWeekGainLoss}\n"
+    description += f"\tDaily BMR [kcal] is: ${getBMRKcalDay()}%.2f\n"
+    description += f"\tDaily TEE [kcal]: ${getTEEKcalDay()}%.2f\n"
+    description += f"\tDaily TEE [kcal] (adjusted for goal): ${getTEEKcalDayAdjustedByGoal()}%.2f\n"
     description
   }
 
@@ -33,9 +40,8 @@ class Person(
   }
 
   // poundsPerWeekGainLoss, e.g. +1, -2 (if gain/lose n ponds per week)
-  private def getTEEKcalDayAdjustByGoal(): Double = {
-    val TEEKcalDay: Double =
-      getTEEKcalDay()
-    TEEKcalDay - (poundsPerWeekGainLoss * 3500 / 7)
+  private def getTEEKcalDayAdjustedByGoal(): Double = {
+    val TEEKcalDay: Double = getTEEKcalDay()
+    TEEKcalDay + (poundsPerWeekGainLoss * 500) // 3500 kcal / 7 days = 500 kcal/day
   }
 }

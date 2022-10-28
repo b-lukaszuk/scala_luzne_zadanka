@@ -6,10 +6,10 @@ object Task4 {
     println()
     println("-" * 30)
     val people: Array[Person] = Array(
-      new Person(68, 170, 20, true, ActivityLevel.ModeratelyActive, -5),
+      new Person(68, 170, 20, true, ActivityLevel.ModeratelyActive, -2),
       new Person(80, 182, 30, false, ActivityLevel.LightlyActive, +2),
-      new Person(95, 182, 40, false, ActivityLevel.Sedentary, -5),
-      new Person(63, 162, 23, true, ActivityLevel.ModeratelyActive, -3)
+      new Person(95, 182, 40, false, ActivityLevel.Sedentary, -1.5),
+      new Person(63, 162, 23, true, ActivityLevel.ModeratelyActive, -1)
     )
     println("Task 4")
     for (person <- people) {
