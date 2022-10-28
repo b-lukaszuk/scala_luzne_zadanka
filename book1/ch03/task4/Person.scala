@@ -1,6 +1,7 @@
 package person
 
 import activityLevel._
+import nutrients._
 
 class Person(
     val weightKg: Double,
@@ -23,6 +24,10 @@ class Person(
     description += f"\tDaily BMR [kcal] is: ${getBMRKcalDay()}%.2f\n"
     description += f"\tDaily TEE [kcal]: ${getTEEKcalDay()}%.2f\n"
     description += f"\tDaily TEE [kcal] (adjusted for goal): ${getTEEKcalDayAdjustedByGoal()}%.2f\n"
+    description += "\tThe energy (TEE [kcal] adjusted for goal) should come from:\n"
+    for (nutrient <- Nutrients.values) {
+      description += f"\t\t${nutrient}: ${getMinKcalForNutrient(nutrient)}%.2f [kcal] - ${getMaxKcalForNutrient(nutrient)}%.2f [kcal]\n"
+    }
     description
   }
 
@@ -43,5 +48,17 @@ class Person(
   private def getTEEKcalDayAdjustedByGoal(): Double = {
     val TEEKcalDay: Double = getTEEKcalDay()
     TEEKcalDay + (poundsPerWeekGainLoss * 500) // 3500 kcal / 7 days = 500 kcal/day
+  }
+
+  private def getMinKcalForNutrient(nutrient: Nutrients.Nutrients): Double = {
+    val decimal: Double =
+      NutrientsPercentageOfKcal.getPercentageOfKcal(nutrient)._1
+    getTEEKcalDayAdjustedByGoal() * decimal
+  }
+
+  private def getMaxKcalForNutrient(nutrient: Nutrients.Nutrients): Double = {
+    val decimal: Double =
+      NutrientsPercentageOfKcal.getPercentageOfKcal(nutrient)._2
+    getTEEKcalDayAdjustedByGoal() * decimal
   }
 }
