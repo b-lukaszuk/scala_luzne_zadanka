@@ -5,6 +5,7 @@
 0. [Background Info](#background-info)
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 
 ---
 
@@ -77,3 +78,17 @@ def variance(xs: Seq[Double]): Option[Double]
 
 Population variance is `sum / n`, sample variance is `sum / (n - 1)`.
 Here, I will go with the first option like in the task description (as suggested in the book).
+
+# Task 3
+
+Exercise 3 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+`bothMatch` is an instance of a more general pattern. Write a generic function `map2`, that combines two `Option` values using a binary function. If either `Option` value is `None`, then the return value is too. Here is its signature:
+
+<pre>
+def map2[A,B,C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C]
+</pre>
