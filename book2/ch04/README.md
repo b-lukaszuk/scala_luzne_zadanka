@@ -6,6 +6,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -91,4 +92,33 @@ Exercise 3 in the chapter 4 of the book.
 
 <pre>
 def map2[A,B,C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C]
+</pre>
+
+# Task 4
+
+Exercise 4 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Re-implement `bothMatch` above in terms of this new function, to the extent possible.
+
+Previous version of `bothMatch`:
+
+<pre>
+def mkMatcher(pat: String): Option[String => Boolean] =
+	pattern(pat) map (p => (s: String) => p.matcher(s).matches)
+
+def bothMatch(pat: String, pat2: String, s: String): Option[Boolean] =
+	for {
+		f <- mkMatcher(pat)
+		g <- mkMatcher(pat2)
+	} yield f(s) && g(s)
+</pre>
+
+Function signature of `bothMatch2`
+
+<pre>
+def bothMatch_2(pat1: String, pat2: String, s: String): Option[Boolean]
 </pre>
