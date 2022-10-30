@@ -107,6 +107,15 @@ Re-implement `bothMatch` above in terms of this new function, to the extent poss
 Previous version of `bothMatch`:
 
 <pre>
+import java.util.regex._
+
+def pattern(s: String): Option[Pattern] =
+	try {
+	Some(Pattern.compile(s))
+	} catch {
+	case e: PatternSyntaxException => None
+}
+
 def mkMatcher(pat: String): Option[String => Boolean] =
 	pattern(pat) map (p => (s: String) => p.matcher(s).matches)
 
@@ -122,3 +131,7 @@ Function signature of `bothMatch2`
 <pre>
 def bothMatch_2(pat1: String, pat2: String, s: String): Option[Boolean]
 </pre>
+
+## My Notes
+
+I will assume that "[...] in terms of this new function, [...]" means `map2` from Exercise 3 (Task3)
