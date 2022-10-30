@@ -117,7 +117,7 @@ def pattern(s: String): Option[Pattern] =
 }
 
 def mkMatcher(pat: String): Option[String => Boolean] =
-	pattern(pat) map (p => (s: String) => p.matcher(s).matches)
+	pattern(pat) map (p => (s: String) => p.matcher(s).find)
 
 def bothMatch(pat: String, pat2: String, s: String): Option[Boolean] =
 	for {
