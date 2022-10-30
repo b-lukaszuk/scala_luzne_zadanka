@@ -2,9 +2,9 @@ object Task3 {
 
   def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] =
     (a, b) match {
-      case (a, None) => None
-      case (None, b) => None
-      case (a, b)    => a.map((i: A) => f(i, b.get))
+      case (_, None) => None
+      case (None, _) => None
+      case (a, b)    => a.map((ai: A) => f(ai, b.get))
     }
 
   def main(args: Array[String]): Unit = {
