@@ -7,6 +7,7 @@
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
+5. [Task 5](#task-5)
 
 ---
 
@@ -135,3 +136,19 @@ def bothMatch_2(pat1: String, pat2: String, s: String): Option[Boolean]
 ## My Notes
 
 I will assume that "[...] in terms of this new function, [...]" means `map2` from Exercise 3 (Task3)
+
+# Task 5
+
+Exercise 5 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `sequence`, that combines a list of `Option`s into one option containing a list of all the `Some` values in the original list. If the original list contains `None` even once, the result of the function should be `None`, otherwise the result should be `Some` with a list of all the values.
+
+Signature:
+
+<pre>
+def sequence[A](a: List[Option[A]]): Option[List[A]]
+</pre>
