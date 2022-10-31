@@ -3,7 +3,6 @@ import java.util.regex._
 object Task5 {
 
   def sequence[A](a: List[Option[A]]): Option[List[A]] = a match {
-    case None :: _ => None
     case head :: tail =>
       head.flatMap((elt: A) =>
         sequence(tail).map((aList: List[A]) => elt :: aList)
