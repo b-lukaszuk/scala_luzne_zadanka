@@ -29,6 +29,7 @@ object Task4 {
 
     val example: Option[Boolean] = bothMatch_2("ala", "kota", "ala ma kota")
     val example2: Option[Boolean] = bothMatch_2("ala", "kota", "ala ma kotka")
+    val example3: Option[Boolean] = bothMatch_2("(", "kota", "ala ma kotka")
 
     println("\n" + "-" * 30)
     println("Task4")
@@ -37,6 +38,8 @@ object Task4 {
     println(s"Result: ${example}\n")
     println("bothMatch_2(\"ala\", \"kota\", \"ala ma kotka\")")
     println(s"Result: ${example2}\n")
+    println("bothMatch_2(\"(\", \"kota\", \"ala ma kotka\")")
+    println(s"Result: ${example3}\n")
     println("That's all. Goodbye!")
     println("-" * 30 + "\n")
   }
