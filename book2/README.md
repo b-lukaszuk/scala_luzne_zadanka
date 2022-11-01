@@ -9,11 +9,19 @@ Used only for educational purposes.
 
 # Usage example
 
+In a 'scripting mode'
+
 ```bash
 scala Task1.scala
 ```
 
-or
+on Ubuntu the 'scripting mode' may require something different (see: [this thread on Stack Overflow](https://stackoverflow.com/questions/50876388/scala-script-doesnt-run-on-ubuntu))
+
+```bash
+scala -nc Task1.scala
+```
+
+or compilation and then running the program
 
 ```bash
 scalac Task1.scala
