@@ -5,7 +5,9 @@ object Task1 {
 
   def getWordsFromFile(filePath: String): ArrayBuffer[String] = {
     val words: ArrayBuffer[String] = new ArrayBuffer(0)
-    val in: Scanner = new Scanner(new java.io.File("./genesis.txt"))
+    val in: Scanner = new Scanner(
+      new java.io.File("../exemplary_text/genesis.txt")
+    )
     while (in.hasNext()) {
       words.append(in.next().strip().toLowerCase().replaceAll("[.,;:!?]", ""))
     }

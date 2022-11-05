@@ -6,7 +6,9 @@ object Task2 {
 
   def getWordsFromFile(filePath: String): ArrayBuffer[String] = {
     val words: ArrayBuffer[String] = new ArrayBuffer(0)
-    val in: Scanner = new Scanner(new java.io.File("./genesis.txt"))
+    val in: Scanner = new Scanner(
+      new java.io.File("../exemplary_text/genesis.txt")
+    )
     while (in.hasNext()) {
       words.append(in.next().strip().toLowerCase().replaceAll("[.,;:!?]", ""))
     }
@@ -18,7 +20,8 @@ object Task2 {
     var wordsCounts: HashMap[String, Int] = HashMap()
     for (word <- words) {
       if (wordsCounts.contains(word)) {
-        wordsCounts = wordsCounts.updated(word, wordsCounts.getOrElse(word, 0) + 1)
+        wordsCounts =
+          wordsCounts.updated(word, wordsCounts.getOrElse(word, 0) + 1)
       } else {
         wordsCounts = wordsCounts + (word -> 1)
       }
