@@ -3,12 +3,13 @@
 # Table of contents
 
 1. [Task 1](#task-1)
+2. [Task 2](#task-2)
 
 ---
 
 # Task 1
 
-Exercise 2 in the chapter 3 of the book.
+Exercise 2 in the chapter 4 of the book.
 
 [Go to: Table of contents](#table-of-contents)
 
@@ -22,3 +23,13 @@ while (in.hasNext()) process in.next()
 </pre>
 
 [...] At the end, print out all words and their counts.
+
+# Task 2
+
+Exercise 3 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Repeat the preceding exercise with an immutable map.
