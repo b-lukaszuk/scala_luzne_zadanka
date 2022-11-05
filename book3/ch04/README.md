@@ -5,6 +5,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -44,3 +45,13 @@ Exercise 4 in the chapter 4 of the book.
 ## Description
 
 Repeat the preceding exercise with a sorted map, so that the words are printed in sorted order.
+
+# Task 4
+
+Exercise 9 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a function `lteqgt(values: Array[Int], v: Int)` that returns a triple containing the counts of values less than `v`, equal to `v`, and greater than `v`.
