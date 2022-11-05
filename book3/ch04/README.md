@@ -4,6 +4,7 @@
 
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 
 ---
 
@@ -33,3 +34,13 @@ Exercise 3 in the chapter 4 of the book.
 ## Description
 
 Repeat the preceding exercise with an immutable map.
+
+# Task 3
+
+Exercise 4 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Repeat the preceding exercise with a sorted map, so that the words are printed in sorted order.
