@@ -31,7 +31,7 @@ object Task2 {
 
   def main(args: Array[String]): Unit = {
     println("-" * 30)
-    println("Task.\n")
+    println("Task2.\n")
     val filePath: String = "./genesis.txt"
     println(s"Reading text from '${filePath}'")
     val words: ArrayBuffer[String] = getWordsFromFile(filePath)
