@@ -4,6 +4,7 @@
 
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 
 ---
 
@@ -25,4 +26,14 @@ Exercise 5 in the chapter 4 of the book.
 
 ## Description
 
-Make a class `Student` with read-write JavaBeans properties name (of type `String`) and `id` (of type `Long`). What methods are generated? (Use `javap` to check.) Can you call the JavaBeans getters and setters in Scala? Should you?
+Make a class `Student` with read-write JavaBeans properties name (of type `String`) and `id` (of type `Long`). What methods are generated? (Use `javap` to check.). [...]
+
+# Task3
+
+Exercise 8 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Make a class `Car` with read-only properties for `manufacturer`, `model name`, and `model year`, and a read-write property for the `license plate`. Supply four constructors. All require the manufacturer and model name. Optionally, model year and license plate can also be specified in the constructor. If not, the model year is set to -1 and the license plate to the empty string. [...]
