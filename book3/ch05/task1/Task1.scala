@@ -1,6 +1,11 @@
-class Time(val hours: Int, val minutes: Int) {
+class Time(private val hours: Int, private val minutes: Int) {
   require(hours >= 0 && hours <= 23)
   require(minutes >= 0 && minutes <= 59)
+  private val minutesAfterMidnight: Int = timeToMinsAfterMidnight()
+
+  private def timeToMinsAfterMidnight(): Int = {
+    this.hours * 60 + this.minutes
+  }
 
   private def optional0(hrsOrMins: Int): String = {
     if (hrsOrMins < 10) "0" else ""
@@ -10,12 +15,8 @@ class Time(val hours: Int, val minutes: Int) {
     s"${optional0(hours)}${hours}:${optional0(minutes)}${minutes}"
   }
 
-  def timeToMins(): Int = {
-    this.hours * 60 + this.minutes
-  }
-
   def before(other: Time): Boolean = {
-    this.timeToMins() < other.timeToMins()
+    this.minutesAfterMidnight < other.minutesAfterMidnight
   }
 }
 
