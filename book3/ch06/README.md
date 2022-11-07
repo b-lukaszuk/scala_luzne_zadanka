@@ -5,6 +5,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -37,3 +38,13 @@ Exercise 6 in the chapter 6 of the book.
 ## Description
 
 Write an enumeration describing the four playing card suits so that the toString method returns: clubs (U+2663), diamonds (U+2666), hearts (U+2665), and spades (U+2660).
+
+# Task 4
+
+Exercise 7 in the chapter 6 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Implement a function that checks whether a card suit value from the preceding exercise is red.
