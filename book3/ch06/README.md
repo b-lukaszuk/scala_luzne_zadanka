@@ -36,4 +36,4 @@ Exercise 6 in the chapter 6 of the book.
 
 ## Description
 
-Write an enumeration describing the four playing card suits so that the toString method returns: clubs, diamonds, hearts, and spades.
+Write an enumeration describing the four playing card suits so that the toString method returns: clubs (U+2663), diamonds (U+2666), hearts (U+2665), and spades (U+2660).
