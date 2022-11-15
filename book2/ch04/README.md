@@ -8,6 +8,7 @@
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
+6. [Task 6](#task-6)
 
 ---
 
@@ -151,4 +152,20 @@ Signature:
 
 <pre>
 def sequence[A](a: List[Option[A]]): Option[List[A]]
+</pre>
+
+# Task 6
+
+Exercise 6 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Implement this (`traverse`) function. It is straightforward to do using `map` and `sequence`, but try for a more efficient implementation that only looks at the list once. In fact, implement `sequence` in terms of `traverse`.
+
+Signature:
+
+<pre>
+def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]]
 </pre>
