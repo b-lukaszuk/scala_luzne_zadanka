@@ -9,6 +9,7 @@
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
+7. [Task 7](#task-7)
 
 ---
 
@@ -168,4 +169,30 @@ Signature:
 
 <pre>
 def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]]
+</pre>
+
+# Task 7
+
+Exercise 7 in the chapter 4 of the book.
+
+## Description
+
+Definition/signature of `Either`
+
+<pre>
+sealed trait Either[+E, +A]
+case class Left[+E](value: E) extends Either[E, Nothing]
+case class Right[+A](value: A) extends Either[Nothing, A]
+</pre>
+
+Implement versions of `map`, `flatMap`, `orElse`, and `map2` on `Either` that operate on the `Right` value.
+
+<pre>
+trait Either[+E, +A] {
+	def map[B](f: A => B): Either[E, B]
+	def flatMap[EE >: E, B](f: A => Either[EE, B]): Either[EE, B]
+	def orElse[EE >: E,B >: A](b: => Either[EE, B]): Either[EE, B]
+	def map2[EE >: E, B, C](b: Either[EE, B])(f: (A, B) => C):
+		Either[EE, C]
+}
 </pre>
