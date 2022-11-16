@@ -14,6 +14,13 @@ object Task7 {
   def add1IfPositive(num: Int): Either[String, Int] =
     if (num > 0) Right(num + 1) else Left("num not greater than 0")
 
+  def myOrElse[EE >: E, B >: A, E, A](
+      e: Either[E, A]
+  )(b: => Either[EE, B]): Either[EE, B] = e match {
+    case Left(_)   => b
+    case Right(r1) => Right(r1)
+  }
+
   def main(args: Array[String]): Unit = {
     println("\n" + "-" * 30)
     println("Task7.")
@@ -27,6 +34,10 @@ object Task7 {
     print(s"myFlatMap(Right(0))(add1IfPositive) = ${myFlatMap(Right(0))(add1IfPositive)}")
     println(",\nwhere:")
     println("def add1IfPositive(num: Int): Either[String, Int]")
+
+    println("\norElse with Either examples:")
+    println(s"myOrElse(Right(5))(Right(4)) = ${myOrElse(Right(5))(Right(4))}")
+    println(s"myOrElse(Left(5))(Right(4)) = ${myOrElse(Left(5))(Right(4))}")
 
     println("\nThat's all. Goodbye!")
     println("-" * 30 + "\n")
