@@ -175,6 +175,8 @@ def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]]
 
 Exercise 7 in the chapter 4 of the book.
 
+[Go to: Table of contents](#table-of-contents)
+
 ## Description
 
 Definition/signature of `Either`
