@@ -18,6 +18,22 @@ object Task4 {
     speedMetPerSec * Math.cos(angleDeg.toRadians)
   }
 
+  def getXMeters(timeSecs: Double, VxMetPerSec: Double): Double = {
+    VxMetPerSec * timeSecs
+  }
+
+  def getYMeters(
+      timeSecs: Double,
+      VyMetPerSec: Double,
+      initialHeightMeters: Double
+  ): Double = {
+    val gravity: Double = 9.8
+    -1 * 0.5 * gravity * Math.pow(
+      timeSecs,
+      2
+    ) + VyMetPerSec * timeSecs + initialHeightMeters
+  }
+
   def main(args: Array[String]): Unit = {
     println("-" * 30)
     println("Task 4.")
