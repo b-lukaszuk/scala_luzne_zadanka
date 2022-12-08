@@ -1,44 +1,73 @@
 object Task4 {
 
   // https://www.youtube.com/watch?v=ZZ39o1rAZWY
-  def getVy(speedMetPerSec: Double, angleDeg: Double): Double = {
-    speedMetPerSec * Math.sin(angleDeg.toRadians)
+
+  def getTimeSI(vySI: Double, hSI: Double, gSI: Double = 9.8): Double = {
+    (vySI + Math.sqrt(Math.pow(vySI, 2) + 2 * gSI * hSI)) / gSI
   }
 
-  def getDeltaVy(VyMetPerSec: Double): Double = {
-    -1 * VyMetPerSec - VyMetPerSec
+  def getVxSI(speedSI: Double, angleDeg: Double): Double = {
+    speedSI * Math.cos(angleDeg.toRadians)
   }
 
-  def getDeltaT(VyMetPerSec: Double): Double = {
-    val gravity: Double = 9.8
-    getDeltaVy(VyMetPerSec) / (gravity * -1)
+  def getVySI(speedSI: Double, angleDeg: Double): Double = {
+    speedSI * Math.sin(angleDeg.toRadians)
   }
 
-  def getVx(speedMetPerSec: Double, angleDeg: Double): Double = {
-    speedMetPerSec * Math.cos(angleDeg.toRadians)
-  }
-
-  def getXMeters(timeSecs: Double, VxMetPerSec: Double): Double = {
-    VxMetPerSec * timeSecs
-  }
-
-  def getYMeters(
-      timeSecs: Double,
-      VyMetPerSec: Double,
-      initialHeightMeters: Double
+  def getDistanceSI(
+      vxSI: Double,
+      vySI: Double,
+      hSI: Double,
+      gSI: Double = 9.8
   ): Double = {
-    val gravity: Double = 9.8
-    -1 * 0.5 * gravity * Math.pow(
-      timeSecs,
-      2
-    ) + VyMetPerSec * timeSecs + initialHeightMeters
+    vxSI * getTimeSI(vySI, hSI, gSI)
+  }
+
+  def getDistanceSI2(
+      speedSI: Double,
+      angleDeg: Double,
+      heightSI: Double
+  ): Double = {
+    getDistanceSI(
+      getVxSI(speedSI, angleDeg),
+      getVySI(speedSI, angleDeg),
+      heightSI
+    )
+  }
+
+  def printTaskDescription(): Unit = {
+    print("Calculating distance traveled by projectile ")
+    println("(neglecting air resistance).")
+    println("Assuming the projectile travels at parabolic path.")
+    print("NO GUARANTEE IT WILL WORK OR WORK CORRECTLY! ")
+    println("USE IT AT YOUR OWN RISK!\n")
   }
 
   def main(args: Array[String]): Unit = {
     println("-" * 30)
     println("Task 4.")
-    println(s"Vy = ${getVy(10, 30)}")
-    println(s"delta t = ${getDeltaT(getVy(10, 30))}")
+    printTaskDescription()
+    val data: Array[Map[String, Double]] = Array(
+      Map("speedSI" -> 10, "heightSI" -> 1, "angleDeg" -> 30),
+      Map("speedSI" -> 370, "heightSI" -> 1.5, "angleDeg" -> 80),
+      Map("speedSI" -> 500, "heightSI" -> 2, "angleDeg" -> 50)
+    )
+
+    println("Examples:")
+    for (datum <- data) {
+      print("---\n")
+      val speed: Double = datum.getOrElse("speedSI", -999)
+      val height: Double = datum.getOrElse("heightSI", -999)
+      val angle: Double = datum.getOrElse("angleDeg", -999)
+      println(s"initial speed: $speed [m/s]")
+      println(s"initial height: $height [m]")
+      println(s"initial angle: $angle [degree]")
+      println(
+        f"traveled distance: ${getDistanceSI2(speed, angle, height)}%.2f [m]"
+      )
+    }
+
+    println("\nThat's all. Goodbye!")
     println("-" * 30)
   }
 }
