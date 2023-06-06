@@ -7,6 +7,7 @@
 # except specific file extensions
 !*.md
 !*.scala
+!*.ipynb
 !*.txt
 # except subdirectories (neccessary for the file extensions above to work correctly)
 !*/
