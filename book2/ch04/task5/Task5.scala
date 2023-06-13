@@ -1,5 +1,3 @@
-import java.util.regex._
-
 object Task5 {
 
   def sequence[A](a: List[Option[A]]): Option[List[A]] = a match {

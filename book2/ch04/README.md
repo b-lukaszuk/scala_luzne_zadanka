@@ -10,6 +10,7 @@
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
 7. [Task 7](#task-7)
+8. [Task 8](#task-8)
 
 ---
 
@@ -194,7 +195,52 @@ trait Either[+E, +A] {
 	def map[B](f: A => B): Either[E, B]
 	def flatMap[EE >: E, B](f: A => Either[EE, B]): Either[EE, B]
 	def orElse[EE >: E,B >: A](b: => Either[EE, B]): Either[EE, B]
-	def map2[EE >: E, B, C](b: Either[EE, B])(f: (A, B) => C):
-		Either[EE, C]
+	def map2[EE >: E, B, C](b: Either[EE, B])(f: (A, B) => C): Either[EE, C]
+}
+</pre>
+
+# Task 8
+
+Exercise 8 in the chapter 4 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Definition/signature of `Either`
+
+<pre>
+sealed trait Either[+E, +A]
+case class Left[+E](value: E) extends Either[E, Nothing]
+case class Right[+A](value: A) extends Either[Nothing, A]
+</pre>
+
+Implement `sequence` and `traverse` for `Either`.
+
+Reminder of `sequence` from `ch04/Task5.scala`
+
+<pre>
+def sequence[A](a: List[Option[A]]): Option[List[A]] = a match {
+  case head :: tail =>
+    head.flatMap((elt: A) =>
+      sequence(tail).map((aList: List[A]) => elt :: aList)
+    )
+  case Nil => Some(Nil)
+}
+</pre>
+
+Reminder of `traverse` function from `ch04/Task6.scala`
+
+<pre>
+def combine[B](b: Option[B], acc: Option[List[B]]): Option[List[B]] =
+  (b, acc) match {
+    case (None, _)              => None
+    case (_, None)              => None
+    case (Some(b1), Some(acc1)) => Some(b1 :: acc1)
+  }
+
+def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]] = a match {
+  case head :: tail => combine(f(head), traverse(tail)(f))
+  case Nil          => Some(Nil)
 }
 </pre>
