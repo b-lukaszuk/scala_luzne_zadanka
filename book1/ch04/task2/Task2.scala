@@ -1,10 +1,8 @@
-object Task2 {
-
-  def sumDigitsInInt(number: Int): Int = {
+object Task2
+  def sumDigitsInInt(number: Int): Int =
     number.toString.split("").map(_.toInt).sum
-  }
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit =
     println("-" * 30)
     println("Task2.")
     println("\nExamples of summing digits in a number (integer)")
@@ -13,5 +11,3 @@ object Task2 {
     println(s"sumDigitsInInt(1185) = ${sumDigitsInInt(1185)}")
     println("\nThat's all. Goodbye.")
     println("-" * 30)
-  }
-}
