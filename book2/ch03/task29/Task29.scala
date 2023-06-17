@@ -1,7 +1,7 @@
 import tree._
 
-object Task29 {
-  def main(args: Array[String]) = {
+object Task29:
+  def main(args: Array[String]) =
     println("\nTree.fold examples:")
     println("\nSize:")
     Tree.printSizeExamples()
@@ -12,5 +12,3 @@ object Task29 {
     println("\nMap:")
     Tree.printMapExamples()
     println("\nThat's all. Goodbye!\n")
-  }
-}
