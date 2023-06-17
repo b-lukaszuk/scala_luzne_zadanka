@@ -1,22 +1,17 @@
-object Task5 {
-  private def curry[A, B, C](f: (A, B) => C): A => (B => C) = {
-    def curriedFn1(a: A): B => C = {
-      def curriedFn2(b: B): C = {
+object Task5:
+  private def curry[A, B, C](f: (A, B) => C): A => (B => C) =
+    def curriedFn1(a: A): B => C =
+      def curriedFn2(b: B): C =
         f(a, b)
-      }
       curriedFn2
-    }
     curriedFn1
-  }
 
-  private def uncurry[A, B, C](f: A => B => C): (A, B) => C = {
-    def uncarriedFn(a: A, b: B): C = {
+  private def uncurry[A, B, C](f: A => B => C): (A, B) => C =
+    def uncarriedFn(a: A, b: B): C =
       f(a)(b)
-    }
     uncarriedFn
-  }
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]) =
     println("\nHi. The program defines uncurry function")
     println("Then it uses it with a curried function as an argument")
     println("The fn 'curry' was defined in task4 (here copy-paste)")
@@ -36,5 +31,3 @@ object Task5 {
     println(s"uncurry(subtractYfromX)(21, 7) = ${uncurry(subtractYfromX)(21, 7)}")
 
     println("\nThat's all. Goodbye!\n")
-  }
-}
