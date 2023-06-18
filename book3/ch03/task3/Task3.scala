@@ -1,6 +1,5 @@
-object Task3 {
-  def main(args: Array[String]): Unit = {
-
+object Task3:
+  def main(args: Array[String]): Unit = 
     val example1: Array[Int] = Array(1, 2, 3, 3, 4, 5)
     val example2: Array[Char] = Array('c', 'a', 'b', 'c', 'b', 'k')
     val example3: Array[String] =
@@ -16,5 +15,3 @@ object Task3 {
     println(s"Result: ${example3.distinct.mkString("[", ", ", "]")}")
     println("That's all. Goodbye!")
     println("-" * 30)
-  }
-}

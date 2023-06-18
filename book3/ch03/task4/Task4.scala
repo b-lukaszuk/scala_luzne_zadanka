@@ -1,6 +1,5 @@
-object Task4 {
-  def main(args: Array[String]): Unit = {
-
+object Task4:
+  def main(args: Array[String]): Unit =
     val allTimeZonesIDs: Array[String] = java.util.TimeZone.getAvailableIDs
     val timeZonesWithAmerica: Array[String] =
       allTimeZonesIDs.filter(_ contains "America")
@@ -15,5 +14,3 @@ object Task4 {
     println(timeZonesInAmericaWithoutPrefix.sorted.mkString("\n"))
     println("\nThat's all. Goodbye!")
     println("-" * 30)
-  }
-}
