@@ -1,27 +1,22 @@
-class Time(private val hours: Int, private val minutes: Int) {
+class Time(private val hours: Int, private val minutes: Int):
   require(hours >= 0 && hours <= 23)
   require(minutes >= 0 && minutes <= 59)
   private val minutesAfterMidnight: Int = timeToMinsAfterMidnight()
 
-  private def timeToMinsAfterMidnight(): Int = {
+  private def timeToMinsAfterMidnight(): Int =
     this.hours * 60 + this.minutes
-  }
 
-  private def optional0(hrsOrMins: Int): String = {
+  private def optional0(hrsOrMins: Int): String =
     if (hrsOrMins < 10) "0" else ""
-  }
 
-  override def toString(): String = {
+  override def toString(): String =
     s"${optional0(hours)}${hours}:${optional0(minutes)}${minutes}"
-  }
 
-  def before(other: Time): Boolean = {
+  def before(other: Time): Boolean =
     this.minutesAfterMidnight < other.minutesAfterMidnight
-  }
-}
 
-object Task1 {
-  def main(args: Array[String]): Unit = {
+object Task1:
+  def main(args: Array[String]): Unit =
     println("-" * 30)
     println("Task1.\n")
     val time1: Time = new Time(5, 23)
@@ -31,5 +26,3 @@ object Task1 {
     println(s"${time1} < ${time3} = ${time1.before(time3)}")
     println("\nThat's all. Goodbye!")
     println("-" * 30)
-  }
-}
