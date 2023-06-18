@@ -1,21 +1,19 @@
-object Task6 {
+object Task6:
   def combine[B](b: Option[B], acc: Option[List[B]]): Option[List[B]] =
-    (b, acc) match {
+    (b, acc) match
       case (None, _)              => None
       case (_, None)              => None
       case (Some(b1), Some(acc1)) => Some(b1 :: acc1)
-    }
 
-  def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]] = a match {
+  def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]] = a match
     case head :: tail => combine(f(head), traverse(tail)(f))
     case Nil          => Some(Nil)
-  }
 
   def add1ToPositive(x: Int): Option[Int] = if (x > 0) Some(x + 1) else None
 
   def sequence[A](a: List[Option[A]]): Option[List[A]] = traverse(a)(identity)
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit =
     println("\n" + "-" * 30)
     println("Task6.")
 
@@ -37,5 +35,3 @@ object Task6 {
 
     println("\nThat's all. Goodbye!")
     println("-" * 30 + "\n")
-  }
-}

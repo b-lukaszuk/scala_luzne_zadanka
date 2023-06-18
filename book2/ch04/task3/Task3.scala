@@ -1,14 +1,11 @@
-object Task3 {
-
+object Task3:
   def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] =
-    (a, b) match {
+    (a, b) match
       case (_, None) => None
       case (None, _) => None
       case (a, b)    => a.map((ai: A) => f(ai, b.get))
-    }
 
-  def main(args: Array[String]): Unit = {
-
+  def main(args: Array[String]): Unit =
     val example: Option[Int] = map2(Some(1), Some(2))((x: Int, y: Int) => x + y)
     val example2: Option[String] =
       map2(Some("Tom"), Some("Jerry"))((x: String, y: String) => s"${x} & ${y}")
@@ -24,5 +21,3 @@ object Task3 {
     println(s"Result: ${example2}\n")
     println("That's all. Goodbye!")
     println("-" * 30 + "\n")
-  }
-}

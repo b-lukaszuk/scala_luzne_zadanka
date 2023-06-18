@@ -1,35 +1,31 @@
-object Task7 {
-  def myMap[A, B, E](e: Either[E, A])(f: A => B): Either[E, B] = e match {
+object Task7:
+  def myMap[A, B, E](e: Either[E, A])(f: A => B): Either[E, B] = e match
     case Right(r1) => Right(f(r1))
     case Left(l1)  => Left(l1)
-  }
 
   def myFlatMap[A, EE >: E, B, E](
       e: Either[EE, A]
-  )(f: A => Either[EE, B]): Either[EE, B] = e match {
+  )(f: A => Either[EE, B]): Either[EE, B] = e match
     case Right(r1) => f(r1)
     case Left(l1)  => Left(l1)
-  }
 
   def add1IfPositive(num: Int): Either[String, Int] =
     if (num > 0) Right(num + 1) else Left("num not greater than 0")
 
   def myOrElse[EE >: E, B >: A, E, A](
       e: Either[E, A]
-  )(b: => Either[EE, B]): Either[EE, B] = e match {
+  )(b: => Either[EE, B]): Either[EE, B] = e match
     case Left(_)   => b
     case Right(r1) => Right(r1)
-  }
 
   def myMap2[EE >: E, B, C, A, E](
       a: Either[EE, A]
-  )(b: Either[EE, B])(f: (A, B) => C): Either[EE, C] = (a, b) match {
+  )(b: Either[EE, B])(f: (A, B) => C): Either[EE, C] = (a, b) match
     case (Left(a2), _)          => Left(a2)
     case (_, Left(b2))          => Left(b2)
     case (Right(a1), Right(b1)) => Right(f(a1, b1))
-  }
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit =
     println("\n" + "-" * 30)
     println("Task7.")
 
@@ -60,5 +56,3 @@ object Task7 {
 
     println("\nThat's all. Goodbye!")
     println("-" * 30 + "\n")
-  }
-}

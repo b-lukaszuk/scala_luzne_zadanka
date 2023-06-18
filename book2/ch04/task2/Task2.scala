@@ -1,13 +1,12 @@
-object Task2 {
-  def mean(xs: Seq[Double]): Option[Double] = {
+object Task2:
+  def mean(xs: Seq[Double]): Option[Double] =
     if (xs.isEmpty) None
     else Some(xs.sum / xs.length)
-  }
 
-  def variance(xs: Seq[Double]): Option[Double] = {
-    if (xs.isEmpty) {
+  def variance(xs: Seq[Double]): Option[Double] =
+    if (xs.isEmpty)
       None
-    } else {
+    else
       val average: Option[Double] = mean(xs)
       val deviations: Seq[Option[Double]] = xs.map(x =>
         average.flatMap((avg: Double) => Some(math.pow(x - avg, 2)))
@@ -18,10 +17,8 @@ object Task2 {
         deviations
           .map((deviation: Option[Double]) => deviation.getOrElse(0: Double))
       )
-    }
-  }
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]) =
     println()
     println("=" * 20)
     println("Solution to Task2.\n")
@@ -32,5 +29,3 @@ object Task2 {
     println("\nThat's all. Goodbye!")
     print("=" * 20)
     println("\n")
-  }
-}
