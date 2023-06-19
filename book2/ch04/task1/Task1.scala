@@ -1,4 +1,4 @@
-import option._
+import option.*
 
 object Task1:
   def main(args: Array[String]) =

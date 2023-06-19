@@ -1,4 +1,4 @@
-import tree._
+import tree.*
 
 object Task26:
   def main(args: Array[String]) =

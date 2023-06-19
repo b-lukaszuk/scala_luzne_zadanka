@@ -1,4 +1,4 @@
-import listing3_1._
+import listing3_1.*
 
 object Task23:
   def main(args: Array[String]) =
