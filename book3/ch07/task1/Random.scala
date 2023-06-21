@@ -1,8 +1,8 @@
 package random:
-  var seed:Long = System.currentTimeMillis
-  val a:Int = 1664525
-  val b:Int = 1013904223
-  val n:Int = 32
+  private var seed:Long = System.currentTimeMillis
+  private val a:Int = 1664525
+  private val b:Int = 1013904223
+  private val n:Int = 32
 
   def setSeed(newSeed:Long): Unit =
     seed = newSeed
