@@ -14,8 +14,8 @@ package random:
 
   def nextInt():Int = nextDouble().toInt
 
-  def getNInts(n:Int = 5) =
+  def getNInts(n:Int = 5): IndexedSeq[Int] =
     for (_ <- 1 to n) yield nextInt()
 
-  def getNDoubles(n:Int = 5) =
+  def getNDoubles(n:Int = 5): IndexedSeq[Double] =
     for (_ <- 1 to n) yield nextDouble()
