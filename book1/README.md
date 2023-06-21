@@ -9,27 +9,14 @@ Used only for educational purposes.
 
 # Usage example
 
-In a 'scripting mode'
-
 ```bash
-scala Task1.scala
-```
-
-on Ubuntu the 'scripting mode' may require something different (see: [this thread on Stack Overflow](https://stackoverflow.com/questions/50876388/scala-script-doesnt-run-on-ubuntu))
-
-```bash
-scala -nc Task1.scala
-```
-
-or compilation and then running the program
-
-```bash
-scalac Task1.scala
-scala Task1
+sbt # and once it is started:
+run # to run code from *.scala file
+exit # to exit sbt
 ```
 
 # Additional info
 
-**Do użytku własnego, nie powinno być używane przez nikogo innego.**
+**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
 
-**For personal use only, should not be used by anyone else.**
+**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**
