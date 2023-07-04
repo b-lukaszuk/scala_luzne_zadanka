@@ -2,6 +2,7 @@
 
 # Table of contents
 
+0. [Additional Info](#additional-info)
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
@@ -55,3 +56,11 @@ Exercise 9 in the chapter 4 of the book.
 ## Description
 
 Write a function `lteqgt(values: Array[Int], v: Int)` that returns a triple containing the counts of values less than `v`, equal to `v`, and greater than `v`.
+
+# Additional info
+
+[Go to: Table of contents](#table-of-contents)
+
+**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
+
+**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**

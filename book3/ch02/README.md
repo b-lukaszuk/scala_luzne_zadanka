@@ -2,6 +2,7 @@
 
 # Table of contents
 
+0. [Additional Info](#additional-info)
 1. [Task 1](#task-1)
 
 ---
@@ -26,3 +27,11 @@ Don’t use a return statement.
 ## My notes
 
 I'll do it my way (it slightly diverges from the recommendation above) but it should work just right.
+
+# Additional info
+
+[Go to: Table of contents](#table-of-contents)
+
+**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
+
+**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**

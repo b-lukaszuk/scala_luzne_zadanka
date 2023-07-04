@@ -2,6 +2,7 @@
 
 # Table of contents
 
+0. [Additional Info](#additional-info)
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 
@@ -35,3 +36,11 @@ Exercise 7 in the chapter 8 of the book.
 ## Description
 
 Provide a class `Square` that extends `java.awt.Rectangle` and has three constructors: one that constructs a square with a given corner point and width, one that constructs a square with corner (0, 0) and a given width, and one that constructs a square with corner (0, 0) and width 0.
+
+# Additional info
+
+[Go to: Table of contents](#table-of-contents)
+
+**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
+
+**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**
