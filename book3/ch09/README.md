@@ -4,6 +4,7 @@
 
 0. [Additional Info](#additional-info)
 1. [Task 1](#task-1)
+2. [Task 2](#task-2)
 
 ---
 
@@ -17,6 +18,22 @@ Exercise 1 in the chapter 9 of the book.
 
 Write a Scala code snippet that reverses the lines in a file (making the last
 line the first one, and so on).
+
+# Task 2
+
+Exercise 5 in the chapter 9 of the book.
+
+## Description
+
+Write a Scala program that writes the powers of 2 and their reciprocals to a
+file, with the exponent ranging from 0 to 20. Line up the columns:
+
+<pre>
+1      1
+2      0.5
+4      0.25
+...
+</pre>
 
 # Additional info
 
