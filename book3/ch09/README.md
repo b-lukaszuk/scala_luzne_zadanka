@@ -5,6 +5,7 @@
 0. [Additional Info](#additional-info)
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
+3. [Task 3](#task-3)
 
 ---
 
@@ -34,6 +35,22 @@ file, with the exponent ranging from 0 to 20. Line up the columns:
 4      0.25
 ...
 </pre>
+
+# Additional info
+
+[Go to: Table of contents](#table-of-contents)
+
+**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
+
+**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**
+
+# Task 3
+
+Exercise 8 in the chapter 9 of the book.
+
+## Description
+
+Write a Scala program that prints the src attributes of all img tags of a web page. Use regular expressions and groups.
 
 # Additional info
 
