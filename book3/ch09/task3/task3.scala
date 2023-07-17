@@ -14,7 +14,7 @@ def getFileContents(filePath:String):String =
   println("Extracting 'src' attributes of all 'img' tags.")
   println("Printing extracted 'src' attributes.\n")
 
-  val htmlContents:String = getFileContents("./test.html")
+  val htmlContents:String = getFileContents(htmlFilePath)
   val imgPattern:Regex = """(?<=<img .*)src=\".+?\"""".r
   for
     matchedString <- imgPattern.findAllIn(htmlContents)
