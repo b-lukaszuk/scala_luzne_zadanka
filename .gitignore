@@ -9,6 +9,7 @@
 !*.scala
 !*.ipynb
 !*.txt
+!*.html
 !build.sbt
 !build.properties
 # except subdirectories (neccessary for the file extensions above to work correctly)
