@@ -4,7 +4,7 @@ import scala.util.matching.Regex
 def getFileContents(filePath:String):String =
   Source.fromFile(filePath).getLines.mkString("\n")
 
-@main def task2: Unit =
+@main def task3: Unit =
   println()
   println("-" * 30)
 
