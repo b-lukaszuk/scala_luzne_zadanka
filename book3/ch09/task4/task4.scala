@@ -1,5 +1,5 @@
 import java.nio.file.{Files, Path, Paths}
-import java.io.File
+import java.util.stream.Stream
 
 @main def task4: Unit =
   println()
@@ -7,13 +7,13 @@ import java.io.File
 
   val startDir: String = "./"
   val fileEnding: String = ".txt"
-  val entries = Files.walk(Paths.get(startDir))
+  val entries: Stream[Path] = Files.walk(Paths.get(startDir))
 
   println(s"Listing files ending with $fileEnding in this directory and its subdirectories")
   try
-    entries.forEach(p =>
-      if Files.isRegularFile(p) && p.toString().endsWith(fileEnding) then
-        println(p)
+    entries.forEach(e =>
+      if Files.isRegularFile(e) && e.toString().endsWith(fileEnding) then
+        println(e)
     )
   finally
     entries.close()
