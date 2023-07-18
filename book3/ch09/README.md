@@ -24,6 +24,8 @@ line the first one, and so on).
 
 Exercise 5 in the chapter 9 of the book.
 
+[Go to: Table of contents](#table-of-contents)
+
 ## Description
 
 Write a Scala program that writes the powers of 2 and their reciprocals to a
@@ -36,17 +38,11 @@ file, with the exponent ranging from 0 to 20. Line up the columns:
 ...
 </pre>
 
-# Additional info
-
-[Go to: Table of contents](#table-of-contents)
-
-**The content of this folder may be incorrect, erroneous and/or harmful. Use it at Your own risk.**
-
-**Zawartość niniejszego katalogu może być nieprawidłowa, błędna czy szkodliwa. Używaj na własne ryzyko.**
-
 # Task 3
 
 Exercise 8 in the chapter 9 of the book.
+
+[Go to: Table of contents](#table-of-contents)
 
 ## Description
 
