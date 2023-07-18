@@ -1,8 +1,13 @@
-import scala.io.Source
+import scala.io.{BufferedSource, Source}
 import scala.util.matching.Regex
 
 def getFileContents(filePath:String):String =
-  Source.fromFile(filePath).getLines.mkString("\n")
+  val bufferedSource:BufferedSource = Source.fromFile(filePath, "UTF-8")
+  try
+    bufferedSource.mkString
+  finally
+    bufferedSource.close()
+
 
 @main def task3: Unit =
   println()
