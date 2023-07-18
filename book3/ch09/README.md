@@ -6,6 +6,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -47,6 +48,16 @@ Exercise 8 in the chapter 9 of the book.
 ## Description
 
 Write a Scala program that prints the src attributes of all img tags of a web page. Use regular expressions and groups.
+
+# Task 4
+
+Exercise 9 in the chapter 9 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a Scala program that counts how many files with .class extension are in a given directory and its subdirectories.
 
 # Additional info
 
