@@ -26,7 +26,7 @@ def printHeader(firstRow:List[Int]): Unit =
      printRow(firstRow)
      print(" " * 5)
      println("_" * 60)
-     println(" " * 60)
+     println(" " * 65)
 
 def printTable(multTab:List[List[Int]], header:Boolean): Unit =
   if multTab.isEmpty then
@@ -40,7 +40,7 @@ def printTable(multTab:List[List[Int]], header:Boolean): Unit =
 @main def task2: Unit =
   println()
   println("-" * 30)
-  println("Recursive function for multiplication table. Example.\n")
+  println("Recursive functions printing multiplication table. Example.\n")
 
   printTable(getMultTable(10), true)
 
