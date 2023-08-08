@@ -2,7 +2,7 @@ import scala.annotation.tailrec
 
 @tailrec
 def isPrime(num:Int, div:Int=2): Boolean =
-  require(num > 1, "Number must be greater than 1.")
+  require(num > 1, "Num must be greater than 1.")
   if (div > math.sqrt(num)) then
     true
   else if (num % div == 0) then
@@ -12,7 +12,8 @@ def isPrime(num:Int, div:Int=2): Boolean =
 
 @tailrec
 def getFactors(num:Int, div:Int, acc:List[Int] = Nil): List[Int] =
-  require(num > 0, "Number must be greater than 0.")
+  require(num > 0, "Num must be greater than 0.")
+  require(div > 0, "Div must be greater than 0.")
   div match
   case 1 => acc // except of 1, because it doesn't go to isPrime
   case _ =>
