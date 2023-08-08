@@ -6,6 +6,7 @@
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
+5. [Task 5](#task-5)
 
 ---
 
@@ -48,3 +49,17 @@ Exercise 9 in the chapter 5 of the book.
 ## Description
 
 Write a recursive function called `isPrime` that returns a `Boolean` and lets you know whether or not a number is prime.
+
+# Task 5
+
+Exercise 10 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a recursive function that prints the prime factors of a number.
+
+### My Notes
+
+The factor of a number is a number that divides the given number completely without any remainder.
