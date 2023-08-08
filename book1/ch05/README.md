@@ -5,6 +5,7 @@
 1. [Task 1](#task-1)
 2. [Task 2](#task-2)
 3. [Task 3](#task-3)
+4. [Task 4](#task-4)
 
 ---
 
@@ -37,3 +38,13 @@ Exercise 7 in the chapter 5 of the book.
 ## Description
 
 Write recursive functions that will print a multiplication table up to 10s. Try to get it running first, then consider how you could make everything line up.
+
+# Task 4
+
+Exercise 9 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a recursive function called `isPrime` that returns a `Boolean` and lets you know whether or not a number is prime.
