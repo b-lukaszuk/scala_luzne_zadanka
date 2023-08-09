@@ -1,13 +1,13 @@
 import scala.annotation.tailrec
 import scala.io.StdIn.readLine
 
-case class EndGameException(s: String)  extends Exception(s)
+case class EndGameException(s: String) extends Exception(s)
 
 def printGameDescription(): Unit =
     println("Let's play a rock-paper-scisors game.")
-    println("The computer makes his move at random")
     println("The player is asked to type a move via terminal.")
-    println("The game lasts until one player wins 3 times.")
+    println("Then the computer makes his move at random.")
+    println("The game lasts until one of the players wins 3 times.")
     println("Ready. Let's begin.")
 
 def printChoiceMenu(): Unit =
@@ -38,7 +38,7 @@ def declareChoice(choice: Int): String = choice match
 
 def getComputerDecision(): Int =
     val compChoice: Int = util.Random.between(1, 3)
-    println(s"Computer choose ${declareChoice(compChoice)}")
+    println(s"Computer chose ${declareChoice(compChoice)}")
     compChoice
 
 def getRoundResult(userChoice: Int, compChoice: Int): List[Int] =
@@ -72,7 +72,7 @@ def playUntil3Wins(result:List[Int] = List(0, 0)): Unit =
 @main def task6: Unit =
       println()
       println("-" * 30)
-      println("Recursive functions for playing rock-paper-scissors.\n")
+      println("Recursive functions for playing rock-paper-scissors. Example.\n")
 
       try
         printGameDescription()
