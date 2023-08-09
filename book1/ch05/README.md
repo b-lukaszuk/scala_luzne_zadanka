@@ -7,6 +7,7 @@
 3. [Task 3](#task-3)
 4. [Task 4](#task-4)
 5. [Task 5](#task-5)
+6. [Task 6](#task-6)
 
 ---
 
@@ -63,3 +64,13 @@ Write a recursive function that prints the prime factors of a number.
 ### My Notes
 
 The factor of a number is a number that divides the given number completely without any remainder.
+
+# Task 6
+
+Exercise 11 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Write a recursive function that lets a user play rock, paper, scissors until either the user or the computer wins 3 times. Hint: use `util.random.nextint`.
