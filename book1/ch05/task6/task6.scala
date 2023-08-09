@@ -66,9 +66,8 @@ def playUntil3Wins(result:List[Int] = List(0, 0)): Unit =
     result match
     case List(3, _) => println("\nGAME OVER. User won 3 times.")
     case List(_, 3) => println("\nGAME OVER. Computer won 3 times.")
-    case _ => playUntil3Wins(
-         addLists(result,
-         getRoundResult(getUserDecision(), getComputerDecision())))
+    case _ => playUntil3Wins(addLists(result,
+      getRoundResult(getUserDecision(), getComputerDecision())))
 
 @main def task6: Unit =
       println()
