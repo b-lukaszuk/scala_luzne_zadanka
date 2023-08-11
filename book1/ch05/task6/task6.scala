@@ -12,9 +12,9 @@ def printGameDescription(): Unit =
 
 def printChoiceMenu(): Unit =
     println("\nEnter your choice.")
-    println("1. Rock")
-    println("2. Paper")
-    println("3. Scisors")
+    println("1. Rock.")
+    println("2. Paper.")
+    println("3. Scisors.")
     println("4. Quit the game.")
 
 @tailrec
@@ -38,7 +38,7 @@ def declareChoice(choice: Int): String = choice match
 
 def getComputerDecision(): Int =
     val compChoice: Int = util.Random.between(1, 3)
-    println(s"Computer chose ${declareChoice(compChoice)}")
+    println(s"Computer chose ${declareChoice(compChoice)}.")
     compChoice
 
 def getRoundResult(userChoice: Int, compChoice: Int): List[Int] =
