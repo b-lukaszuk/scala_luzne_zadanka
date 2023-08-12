@@ -1,5 +1,4 @@
 ---
-
 # Table of contents
 
 1. [Task 1](#task-1)
@@ -9,7 +8,7 @@
 5. [Task 5](#task-5)
 6. [Task 6](#task-6)
 7. [Task 7](#task-7)
-
+8. [Task 8](#task-8)
 ---
 
 # Task 1
@@ -85,3 +84,17 @@ Exercise 13 in the chapter 5 of the book.
 ## Description
 
 Suppose that tuition at a university costs $30,000 per year and increases 5% per year. Write a recursive function that computes the total cost of tuition a student would pay for a 4-year degree if they started 10 years from now.
+
+# Task 8
+
+Exercise 15 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+An efficient method of finding the greatest common divisor, gcd, of two integers is Euclid’s algorithm. This is a recursive algorithm that can be expressed in mathematical notation in the following way.
+
+$gcd(a, b) = \begin{cases} a & b = 0 \\ gcd(b, a\ mod\ b) & otherwise \end{cases}$
+
+Convert this to Scala code.
