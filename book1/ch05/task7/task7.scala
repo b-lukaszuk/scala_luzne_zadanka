@@ -1,5 +1,4 @@
 import scala.annotation.tailrec
-import scala.concurrent.duration.fromNow
 
 @tailrec
 def getTuition(start:Double, incr:Double, years: Int):Double =
