@@ -98,3 +98,17 @@ An efficient method of finding the greatest common divisor, gcd, of two integers
 $gcd(a, b) = \begin{cases} a & b = 0 \\ gcd(b, a\ mod\ b) & otherwise \end{cases}$
 
 Convert this to Scala code.
+
+# Task 9
+
+Exercise 16 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Certain problems can use a bit more information than just the gcd provided by Euclid’s algorithm shown in exercise 15. In particular, it is often helpful to have the smallest magnitude values of x and y that satisfy the equation `gcd = xa + by`. This information can be found efficiently using the extended Euclid’s algorithm. This is the math notation for that function.
+
+$eEuclid(a, b) = \begin{cases} (a, 1, 0) & b = 0 \\ (d, x, y) = eEuclid(b, a\ mod\ b) (d, y, x - \lfloor{a / b}\rfloor * y) & otherwise \end{cases}$
+
+Convert this to Scala. Note that the $\lfloor{a/b}\rfloor$ operation is naturally achieved by the truncation of integer division for positive a and b.
