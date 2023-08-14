@@ -8,11 +8,12 @@ def getGcd(a: Int, b: Int): Int =
     else
        getGcd(b, a % b)
 
-def testGcd(gcd: (x: Int, y: Int) => Int): Unit =
+def testDeclareFn(fn: (x: Int, y: Int) => Int,
+    fnName: String = "getGcd"): Unit =
     val rnd = new scala.util.Random
     val n1: Int = rnd.between(2, 30)
     val n2: Int = rnd.between(2, 30)
-    println(s"getGcd($n1, $n2) = ${gcd(n1, n2)}")
+    println(s"${fnName}($n1, $n2) = ${fn(n1, n2)}")
 
 @main def task8: Unit =
   println()
@@ -20,7 +21,7 @@ def testGcd(gcd: (x: Int, y: Int) => Int): Unit =
   println("Recursive functions for greatest common divisor. Examples.\n")
 
   for (_ <- 1 to 5)
-      testGcd(getGcd)
+      testDeclareFn(getGcd)
 
   println("\nThat's all. Goodbye!")
   println("-" * 30)
