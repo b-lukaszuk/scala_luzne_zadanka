@@ -9,6 +9,7 @@
 6. [Task 6](#task-6)
 7. [Task 7](#task-7)
 8. [Task 8](#task-8)
+9. [Task 9](#task-9)
 ---
 
 # Task 1
