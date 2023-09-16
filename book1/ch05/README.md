@@ -150,6 +150,12 @@ The input for your program is the initial rabbit population, R0, the initial fox
 
 ## My notes
 
+To run the task type
+
+```bash
+scala3 ./task10/task10.scala > pop.txt
+```
+
 To run the example presented above type in bash/terminal:
 
 ```bash
