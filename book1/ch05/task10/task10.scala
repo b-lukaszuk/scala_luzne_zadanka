@@ -31,7 +31,6 @@ def getFoxes(fN:Double, c:Double, d:Double, rN:Double):Double =
   * @param b - predation rate in decimal (0.1 = 10%, etc.)
   * @param c - rate of foxes dying w/o children since there is no food (rabbits)
   * @param d - rate at which foxes have children when they have food (rabbits)
-  * @param fN - number of foxes at the beginning of a cycle
   *
   * @return - the new number of rabbits and foxes in a population after a cycle
   */
@@ -51,7 +50,6 @@ def getPopulations(
   * @param b - predation rate in decimal (0.1 = 10%, etc.)
   * @param c - rate of foxes dying w/o children since there is no food (rabbits)
   * @param d - rate at which foxes have children when they have food (rabbits)
-  * @param fN - number of foxes at the beginning of a cycle
   * @param nIter - number of cycles
   *
   * @return - the numbers of rabbits and foxes in populations after nIter cycles

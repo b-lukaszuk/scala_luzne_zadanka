@@ -156,9 +156,10 @@ To run the task type
 scala3 ./task10/task10.scala > pop.txt
 ```
 
-To run the example presented above type in bash/terminal:
+To run the example presented above type:
 
 ```bash
-gnuplot # once the program runs type after prompt
+gnuplot # in terminal
+# once the program runs after the prompt (gnuplot>) type
 gnuplot> plot 'pop.txt' using($1):($2), 'pop.txt' using ($1):($3)
 ```
