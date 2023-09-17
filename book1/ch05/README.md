@@ -153,7 +153,7 @@ The input for your program is the initial rabbit population, R0, the initial fox
 To run the task type
 
 ```bash
-scala3 ./task10/task10.scala > pop.txt
+scala3 ./task10/task10.scala 100 10 0.01 0.001 0.05 0.001 > pop.txt
 ```
 
 To run the example presented above type:

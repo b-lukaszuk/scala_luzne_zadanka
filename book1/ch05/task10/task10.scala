@@ -70,9 +70,24 @@ def getPopulationChanges(
       a, b, c, d, nIter - 1
     )
 
+def printNoArgsMessage(): Unit =
+    println("To work properly I need 6 arguments Rn, Fn, A, B, C, D.")
+    println("For instance: scala3 task10.scala 100 10 0.01 0.001 0.05 0.001")
+    println("Rn - initial number of rabbits,")
+    println("Fn - initial number of foxes,")
+    println("A - normal increase in the rabbit population, e.g. 0.1 for +10%")
+    println("B - predation rate in decimal (0.1 = 10%, etc.)")
+    println("C - rate foxes dying w/o children cause no food (rabbits)")
+    println("D - rate foxes have children when they have food (rabbits)")
 
-@main def task5: Unit =
-  // Recursive functions for populations changes example
-  for (population <- getPopulationChanges())
-    val (i, r, f) = population
-    println(s"$i $r $f")
+@main def task5(vargs:String*): Unit =
+  if (vargs.length == 0)
+    printNoArgsMessage()
+  else
+    // Recursive functions for populations changes example
+    val Seq(rN: Double, fN: Double,
+      a: Double, b: Double, c: Double, d: Double) =
+      vargs.slice(0, 6).map(_.toDouble)
+    for (population <- getPopulationChanges((0, rN, fN)::Nil, a, b, c, d))
+      val (i, r, f) = population
+      println(s"$i $r $f")
