@@ -11,6 +11,7 @@
 8. [Task 8](#task-8)
 9. [Task 9](#task-9)
 10. [Task 10](#task-10)
+11. [Task 11](#task-11)
 ---
 
 # Task 1
@@ -163,3 +164,25 @@ gnuplot # in terminal
 # once the program runs after the prompt (gnuplot>) type
 gnuplot> plot 'pop.txt' using($1):($2), 'pop.txt' using ($1):($3)
 ```
+
+# Task 11
+
+Project 5 in the chapter 5 of the book.
+
+[Go to: Table of contents](#table-of-contents)
+
+## Description
+
+Suppose that you want to take out a house loan. Your monthly payment for the loan pays both the principal and the interest. The formula for your monthly payment is:
+
+$monthlyPayment = \frac{loanAmount \times monthlyInterestRate}{1 - (1 + monthlyInterestRate)^{numberOfYears \times 12}}$
+
+The formula for your total payment is:
+
+$totalPayment = monthlyPayment \times numberOfYears \times 12$
+
+You can compute the monthly interest by multiplying the monthly interest rate and the remaining principal balance.
+
+The principal paid for the month is the monthly payment minus the monthly interest.
+
+Write a script that lets a user enter the house loan amount, number of years they want to take to pay off the loan, and annual interest rate. Display the monthly payment, the total payment amount and lastly, an amortization schedule that shows the payment number, interest paid, principle paid, remaining balance for each of the monthly payments to be paid for the duration of the loan.
