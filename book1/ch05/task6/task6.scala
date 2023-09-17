@@ -69,7 +69,7 @@ def playUntil3Wins(result:List[Int] = List(0, 0)): Unit =
     case _ => playUntil3Wins(addLists(result,
       getRoundResult(getUserDecision(), getComputerDecision())))
 
-@main def task6: Unit =
+@main def task6(): Unit =
       println()
       println("-" * 30)
       println("Recursive functions for playing rock-paper-scissors. Example.\n")

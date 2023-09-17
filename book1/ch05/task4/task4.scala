@@ -10,7 +10,7 @@ def isPrime(num:Int, div:Int=2): Boolean =
   else
     isPrime(num, div+1)
 
-@main def task4: Unit =
+@main def task4(): Unit =
   println()
   println("-" * 30)
   println("Recursive function `isPrime`. Examples.\n")

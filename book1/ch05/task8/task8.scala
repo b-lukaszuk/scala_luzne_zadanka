@@ -15,7 +15,7 @@ def testDeclareFn(fn: (x: Int, y: Int) => Int,
     val n2: Int = rnd.between(2, 30)
     println(s"${fnName}($n1, $n2) = ${fn(n1, n2)}")
 
-@main def task8: Unit =
+@main def task8(): Unit =
   println()
   println("-" * 30)
   println("Recursive functions for greatest common divisor. Examples.\n")

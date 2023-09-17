@@ -7,7 +7,7 @@ def getEEuclid(a: Int, b: Int): (Int, Int, Int) =
         val (gcd, x, y) = getEEuclid(b, a % b)
         (gcd, y, x - math.floor(a/b).toInt * y)
 
-@main def task9: Unit =
+@main def task9(): Unit =
   println()
   println("-" * 30)
   println("Recursive functions for eEuclid. Examples.\n")

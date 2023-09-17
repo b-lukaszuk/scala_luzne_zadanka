@@ -80,7 +80,7 @@ def printNoArgsMessage(): Unit =
     println("C - rate foxes dying w/o children cause no food (rabbits)")
     println("D - rate foxes have children when they have food (rabbits)")
 
-@main def task5(vargs:String*): Unit =
+@main def task10(vargs:String*): Unit =
   if (vargs.length == 0)
     printNoArgsMessage()
   else

@@ -37,7 +37,7 @@ def printTable(multTab:List[List[Int]], header:Boolean): Unit =
     printRow(multTab.head)
     printTable(multTab.tail, false)
 
-@main def task3: Unit =
+@main def task3(): Unit =
   println()
   println("-" * 30)
   println("Recursive functions printing multiplication table. Example.\n")

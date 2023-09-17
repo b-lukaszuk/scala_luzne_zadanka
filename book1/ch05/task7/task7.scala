@@ -15,7 +15,7 @@ def getTotalTuition(start: Double, incr:Double=0.05,
     else
        getTotalTuition(getTuition(start, incr, 1), incr, years - 1, start + acc)
 
-@main def task5: Unit =
+@main def task7(): Unit =
       println()
       println("-" * 30)
       println("Recursive functions for calculating total tuition. Examples.\n")

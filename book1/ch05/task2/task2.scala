@@ -5,7 +5,7 @@ def getPower(num:Int, pow:Int, acc:Int=1):Int =
   require (pow >= 0)
   if (pow == 0) then acc else getPower(num, pow-1, acc*num)
 
-@main def task2: Unit =
+@main def task2(): Unit =
   println()
   println("-" * 30)
   println("Recursive power function. Examples")

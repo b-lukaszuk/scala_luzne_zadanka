@@ -35,7 +35,7 @@ def myFilter[A](pred: (x: A) => Boolean,
 def getPrimeFactors(num:Int): List[Int] =
   myFilter((x) => isPrime(x), getFactors(num, num))
 
-@main def task5: Unit =
+@main def task5(): Unit =
   println()
   println("-" * 30)
   println("Recursive functions for prime factors of a number. Examples.\n")
