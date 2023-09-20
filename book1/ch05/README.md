@@ -179,9 +179,9 @@ Write a script that lets a user enter the house loan amount, number of years the
 
 ## My Notes
 
-From [A Simplified Guide on How to Calculate Loan Payments ](https://www.moneygeek.com/personal-loans/calculate-loan-payments/):
+From [A Simplified Guide on How to Calculate Loan Payments](https://www.moneygeek.com/personal-loans/calculate-loan-payments/) (corrected by me):
 
-$P = a \div \{ [(1 + r)^n] - 1\} \div [r \times (1+r)^n]$, where:
+$P = \frac{a}{\{ [(1 + r)^n] - 1\} \div [r \times (1+r)^n]}$, where:
 
 - P is your monthly loan payment
 - a is your principal
