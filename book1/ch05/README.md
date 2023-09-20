@@ -143,11 +143,11 @@ Abbreviations:
 - C - the rate of foxes dying without having children if they do not have food (rabbits)
 - D - the rate at which foxes have children when they have food (rabbits)
 
-[...] The four constants should have positive values. [..]  In reality, foxes and rabbits only come in whole numbers, but for numeric reasons, you should use `Doubles` in your program.
+[...] The four constants should have positive values. [..] In reality, foxes and rabbits only come in whole numbers, but for numeric reasons, you should use `Doubles` in your program.
 
 The input for your program is the initial rabbit population, R0, the initial fox population F0 , and the four constants. To start you off, you might try values of 100, 10, 0.01, 0.001, 0.05, and 0.001. The last four numbers are A, B, C, and D, respectively. You can play with these values to try to find some that produce interesting results. Print out the first 1000 iterations.
 
-[...] output only numbers. [...]  If you print 3 numbers per line, “n R F ”, and put it in a file called “pop.txt” then you can plot that in gnuplot with a command like “plot ’pop.txt’ using ($1):($2), ’pop.txt’ using ($1):($3)”.
+[...] output only numbers. [...] If you print 3 numbers per line, “n R F ”, and put it in a file called “pop.txt” then you can plot that in gnuplot with a command like “plot ’pop.txt’ using ($1):($2), ’pop.txt’ using ($1):($3)”.
 
 ## My notes
 
@@ -173,16 +173,17 @@ Project 5 in the chapter 5 of the book.
 
 ## Description
 
-Suppose that you want to take out a house loan. Your monthly payment for the loan pays both the principal and the interest. The formula for your monthly payment is:
-
-$monthlyPayment = \frac{loanAmount \times monthlyInterestRate}{1 - (1 + monthlyInterestRate)^{numberOfYears \times 12}}$
-
-The formula for your total payment is:
-
-$totalPayment = monthlyPayment \times numberOfYears \times 12$
-
-You can compute the monthly interest by multiplying the monthly interest rate and the remaining principal balance.
-
-The principal paid for the month is the monthly payment minus the monthly interest.
+Suppose that you want to take out a house loan. Your monthly payment for the loan pays both the principal and the interest. [...]
 
 Write a script that lets a user enter the house loan amount, number of years they want to take to pay off the loan, and annual interest rate. Display the monthly payment, the total payment amount and lastly, an amortization schedule that shows the payment number, interest paid, principle paid, remaining balance for each of the monthly payments to be paid for the duration of the loan.
+
+## My Notes
+
+From [A Simplified Guide on How to Calculate Loan Payments ](https://www.moneygeek.com/personal-loans/calculate-loan-payments/):
+
+$P = a \div \{ [(1 + r)^n] - 1\} \div [r \times (1+r)^n]$, where:
+
+- P is your monthly loan payment
+- a is your principal
+- r is your periodic interest rate, which is your interest rate divided by 12
+- n is the total number of months in your loan term
